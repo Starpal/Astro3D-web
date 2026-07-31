@@ -245,17 +245,17 @@ function Chart2D({ chart, onSelectPlanet }: Props) {
   return (
     <div ref={containerRef} style={styles.container}>
       <div
-        style={{
-          ...styles.zoomWrapper,
-          transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
-          cursor: zoom > ZOOM_MIN ? "grab" : "default",
-        }}
         onWheel={handleWheel}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
         onDoubleClick={handleDoubleClick}
+        style={{
+          ...styles.zoomWrapper,
+          transform: `translate(${pan.x}px, ${pan.y}px) scale(${zoom})`,
+          cursor: zoom > ZOOM_MIN ? "grab" : "default",
+        }}
       >
         <svg width={chartSize} height={chartSize} style={styles.chart}>
           <ZodiacLayer

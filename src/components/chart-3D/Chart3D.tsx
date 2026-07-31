@@ -1,12 +1,10 @@
 import React, {
-  useCallback,
   useEffect,
   useMemo,
   useRef,
   useState,
 } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import type { ThreeEvent } from "@react-three/fiber";
 import { OrbitControls, Html } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -52,9 +50,9 @@ const ASCENDANT_ROTATION_SIGN = -1;
 const ASCENDANT_PHASE_OFFSET = (3 * Math.PI) / 4;
 
 const CAMERA_POSITIONS: Record<ViewMode, THREE.Vector3> = {
-  longitude: new THREE.Vector3(0, 6, 0),
-  declination: new THREE.Vector3(4, 0, 2),
-  "3d": new THREE.Vector3(4, 4, 4),
+  longitude: new THREE.Vector3(0, 5.2, 0),
+  declination: new THREE.Vector3(3.7, 0, 5),
+  "3d": new THREE.Vector3(3.3, 1, 5),
 };
 
 function hex(c: string): THREE.Color {
@@ -146,6 +144,28 @@ function latCirclePoints(
       ),
     );
   }
+  return pts;
+}
+
+function meridianPoints(
+  radius: number,
+  lonRad: number,
+  segments = 64,
+): THREE.Vector3[] {
+  const pts: THREE.Vector3[] = [];
+
+  for (let i = 0; i <= segments; i++) {
+    const t = -Math.PI / 2 + (i / segments) * Math.PI;
+
+    pts.push(
+      new THREE.Vector3(
+        radius * Math.cos(t) * Math.cos(lonRad),
+        radius * Math.sin(t),
+        radius * Math.cos(t) * Math.sin(lonRad)
+      )
+    );
+  }
+
   return pts;
 }
 
@@ -261,6 +281,28 @@ function StaticScene({
     }
     addLine(group, eqPts, "#334466", 0.8);
 
+const GRID_COLOR = "#3e6cff";
+
+// Paralleli
+for (let lat = -75; lat <= 75; lat += 15) {
+  addLine(
+    group,
+    latCirclePoints(2, THREE.MathUtils.degToRad(lat)),
+    GRID_COLOR,
+    lat === 0 ? 0.35 : 0.12,
+  );
+}
+
+// Meridiani
+for (let lon = 0; lon < 360; lon += 15) {
+  addLine(
+    group,
+    meridianPoints(2, THREE.MathUtils.degToRad(lon)),
+    GRID_COLOR,
+    0.12,
+  );
+}
+
     const oblRad = (23.4366 * Math.PI) / 180;
     addLine(group, circlePoints(2, oblRad), "#C8A96E", 0.4);
     addLine(group, latCirclePoints(2, oblRad), "#C8A96E", 0.2);
@@ -375,7 +417,12 @@ function PlanetMeshes({
 
         return (
           <group key={planet.id} position={pos}>
-            <mesh onClick={(e) => { e.stopPropagation(); onSelectPlanet(planet.id); }}>
+            <mesh
+              onClick={(e) => {
+                e.stopPropagation();
+                onSelectPlanet(planet.id);
+              }}
+            >
               <sphereGeometry args={[radius, 12, 12]} />
               <meshBasicMaterial transparent opacity={0} depthWrite={false} />
             </mesh>
@@ -399,6 +446,7 @@ function PlanetMeshes({
     </>
   );
 }
+const SCENE_SCALE = 1.7;
 
 // ---------------------------------------------------------------------------
 // Camera: al cambio di viewMode anima la transizione; l'utente controlla
@@ -430,7 +478,7 @@ function CameraRig({ viewMode }: { viewMode: ViewMode }) {
   );
 }
 
-function CelestialSphere({ chart, onSelectPlanet }: Props) {
+export default function Chart3D({ chart, onSelectPlanet }: Props) {
   const ascendant = chart.houses.angles.ascendant;
 
   const planets = useMemo(
@@ -487,11 +535,15 @@ function CelestialSphere({ chart, onSelectPlanet }: Props) {
               <pointLight intensity={0.6} />
               <hemisphereLight args={[0x8fa8d9, 0x14141f, 0.6]} />
 
-              <group rotation={[0, rootRotationY, 0]} scale={[1, 1, -1]}>
+              <group
+                rotation={[0, rootRotationY, 0]}
+                scale={[SCENE_SCALE, SCENE_SCALE, -SCENE_SCALE]}
+              >
                 <StaticScene
                   planets={planets}
                   declinationAspects={declinationAspects}
                 />
+
                 <PlanetMeshes
                   planets={planets}
                   viewMode={viewMode}
@@ -569,4 +621,3 @@ const styles: Record<string, React.CSSProperties> = {
   btnTextActive: { color: "#0A0A12" },
 };
 
-export default CelestialSphere;

@@ -31,9 +31,9 @@ function HouseLayer({ houses, ascendant, radius, toXY }: Props) {
               y1={inner.y}
               x2={outer.x}
               y2={outer.y}
-              stroke="#a5874f"
+              stroke="#8d4fa5"
               strokeOpacity={0.5}
-              strokeWidth={0.4}
+              strokeWidth={0.3}
             />
 
             {/* House number */}

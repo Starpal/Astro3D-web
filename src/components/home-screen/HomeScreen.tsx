@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import BirthDataForm from "../birth-data-form/BirthDataForm";
 import Chart3D from "../chart-3D/Chart3D";
-import PlanetProfileCard from "../planetary-table/PlanetProfileCard";
-import PlanetaryPositionsModal from "../planetary-table/PlanetaryPositionsModal";
+import PlanetProfileCard from "../planetary-table/planet-profile-card/PlanetProfileCard";
+import PlanetaryPositionsModal from "../planetary-table/planetary-position-modal/PlanetaryPositionsModal";
 
 import type { NatalChart } from "../../types/astrology";
 import type { ChartRequestBody } from "../../types/backend";
@@ -113,9 +113,7 @@ export default function HomeScreen() {
         </button>
       </div>
 
-      {chart && (
-        <Chart3D chart={chart} onSelectPlanet={setSelectedObject} />
-      )}
+      {chart && <Chart3D chart={chart} onSelectPlanet={setSelectedObject} />}
 
       {chart && (
         <PlanetaryPositionsModal

@@ -1,5 +1,4 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
 
 export interface PlanetHalo {
   color: string;
@@ -28,57 +27,59 @@ function PlanetLabel({
   const ringColor = halo ? "#ead362e0" : color;
 
   return (
-    <Box
-      onClick={() => onSelect(planetKey)}
-      sx={{
-        position: "absolute",
+    <div
+      style={{
+        ...styles.planetLabel,
         left: x - 18,
         top: y - 18,
-        width: 36,
-        height: 36,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
         cursor: "pointer",
-        userSelect: "none",
       }}
+      onClick={() => onSelect(planetKey)}
     >
-      <Box
-        sx={{
-          width: 26,
-          height: 26,
-          borderRadius: "50%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-
-          border: `${halo ? 2.5 : 0.75}px solid ${ringColor}`,
-
+      <div
+        style={{
+          ...styles.planetRing,
+          borderColor: ringColor,
+          borderWidth: halo ? 2.5 : 0.75,
+          borderStyle: "solid",
           opacity: halo ? halo.opacity : 0.7,
-
-          backgroundColor: "rgba(10,10,18,0.65)",
-
-          transition: "all 0.2s ease",
-
-          "&:hover": {
-            transform: "scale(1.15)",
-          },
         }}
       >
-        <Typography
-          component="span"
-          sx={{
-            fontSize: 13,
-            fontWeight: 700,
-            color,
-            lineHeight: 1,
-          }}
-        >
-          {symbol}
-        </Typography>
-      </Box>
-    </Box>
+        <span style={{ ...styles.planetSymbol, color }}>{symbol}</span>
+      </div>
+    </div>
   );
 }
 
 export default React.memo(PlanetLabel);
+
+const styles: Record<string, React.CSSProperties> = {
+  planetLabel: {
+    position: "absolute",
+    width: 36,
+    height: 36,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  planetRing: {
+    width: 30,
+    height: 30,
+    minWidth: 30,
+    minHeight: 30,
+    maxWidth: 30,
+    maxHeight: 30,
+    boxSizing: "border-box",
+    borderRadius: "50%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(10,10,18,0.65)",
+  },
+  planetSymbol: {
+    fontSize: 13,
+    fontWeight: 700,
+  },
+};
+
+
