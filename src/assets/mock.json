@@ -1,0 +1,2013 @@
+{
+  "astronomy": {
+    "objects": [
+      {
+        "id": "sun",
+        "name": "Sun",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 273.597641228859,
+          "latitude": 0.000047620108757349,
+          "distance": 0.983501358438748,
+          "rightAscension": 273.92035956789,
+          "declination": -23.39424376912,
+          "speedLongitude": 1.01900398129044,
+          "speedLatitude": 0.000028119565984712,
+          "speedDistance": -0.000052235738199566
+        }
+      },
+      {
+        "id": "moon",
+        "name": "Moon",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 344.521908623265,
+          "latitude": -1.09553532604761,
+          "distance": 0.00246889853117636,
+          "rightAscension": 346.170978286049,
+          "declination": -7.10531543858445,
+          "speedLongitude": 14.1570028942221,
+          "speedLatitude": 1.21727239500093,
+          "speedDistance": 0.000026660995812899
+        }
+      },
+      {
+        "id": "mercury",
+        "name": "Mercury",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 275.09116533631,
+          "latitude": -1.71376193512734,
+          "distance": 1.43968262275043,
+          "rightAscension": 275.619223530054,
+          "declination": -25.0577374652759,
+          "speedLongitude": 1.59630729055239,
+          "speedLatitude": -0.0665629943032637,
+          "speedDistance": -0.00308467298231948
+        }
+      },
+      {
+        "id": "venus",
+        "name": "Venus",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 304.532685479602,
+          "latitude": -1.80628371397192,
+          "distance": 1.3652089389281,
+          "rightAscension": 307.332538030408,
+          "declination": -20.8852695658181,
+          "speedLongitude": 1.23500143983872,
+          "speedLatitude": -0.00471588690971475,
+          "speedDistance": -0.00511958891380201
+        }
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 230.909799071741,
+          "latitude": 0.533722519740606,
+          "distance": 2.18351573598142,
+          "rightAscension": 228.623103895496,
+          "declination": -17.4711784570995,
+          "speedLongitude": 0.661617658402635,
+          "speedLatitude": -0.00878842179065071,
+          "speedDistance": -0.00734515899937907
+        }
+      },
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 19.9535948825594,
+          "latitude": -1.31990358255533,
+          "distance": 4.59327298172343,
+          "rightAscension": 18.9236049472334,
+          "declination": 6.58040279685277,
+          "speedLongitude": 0.0361729088215833,
+          "speedLatitude": 0.00519522359520901,
+          "speedDistance": 0.0153831225072965
+        }
+      },
+      {
+        "id": "saturn",
+        "name": "Saturn",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 264.757168367405,
+          "latitude": 1.1222919671658,
+          "distance": 11.009660503245,
+          "rightAscension": 264.336446569264,
+          "declination": -22.2179222586309,
+          "speedLongitude": 0.117433412976357,
+          "speedLatitude": -0.000772963554073964,
+          "speedDistance": -0.00260028463751906
+        }
+      },
+      {
+        "id": "uranus",
+        "name": "Uranus",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 267.299024691284,
+          "latitude": -0.165481850461609,
+          "distance": 20.2252853803577,
+          "rightAscension": 267.052732999466,
+          "declination": -23.5810935990174,
+          "speedLongitude": 0.0603507117289448,
+          "speedLatitude": -0.00016882546462344,
+          "speedDistance": -0.00173423876656312
+        }
+      },
+      {
+        "id": "neptune",
+        "name": "Neptune",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 277.556543136113,
+          "latitude": 0.958568860717744,
+          "distance": 31.2104709009993,
+          "rightAscension": 278.168520495889,
+          "declination": -22.270626585953,
+          "speedLongitude": 0.0378008017448207,
+          "speedLatitude": -0.000188336666143659,
+          "speedDistance": 0.00117606500440576
+        }
+      },
+      {
+        "id": "pluto",
+        "name": "Pluto",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 221.835512231956,
+          "latitude": 15.8335369036465,
+          "distance": 30.2482094884131,
+          "rightAscension": 224.208863458262,
+          "declination": -0.284637668705693,
+          "speedLongitude": 0.0282414131625331,
+          "speedLatitude": 0.00636830822579557,
+          "speedDistance": -0.0131800414123808
+        }
+      },
+      {
+        "id": "chiron",
+        "name": "Chiron",
+        "type": "asteroid",
+        "astronomy": {
+          "longitude": 85.5227830646604,
+          "latitude": -6.29819649175643,
+          "distance": 11.7470904863616,
+          "rightAscension": 85.3442731253914,
+          "declination": 17.0727083124065,
+          "speedLongitude": -0.0623705095140298,
+          "speedLatitude": -0.000242961490902799,
+          "speedDistance": 0.000561169004711735
+        }
+      },
+      {
+        "id": "lilith-mean",
+        "name": "Black Moon Lilith (Mean)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 134.456172151588,
+          "latitude": 3.51633750178204,
+          "distance": 0.00271062513172255,
+          "rightAscension": 138.008599446791,
+          "declination": 19.8591379130367,
+          "speedLongitude": 0.11134858589532,
+          "speedLatitude": -0.010767834277903,
+          "speedDistance": 0
+        }
+      },
+      {
+        "id": "north-node-true",
+        "name": "North Node (True)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 357.056094329543,
+          "latitude": 0,
+          "distance": 0.00249394348301901,
+          "rightAscension": 357.29872408423,
+          "declination": -1.17077102156416,
+          "speedLongitude": -0.0138340955740251,
+          "speedLatitude": 0,
+          "speedDistance": -5.98858877731225e-7
+        }
+      },
+      {
+        "id": "north-node-mean",
+        "name": "North Node (Mean)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 357.488720934022,
+          "latitude": 0,
+          "distance": 0.00256955528979999,
+          "rightAscension": 357.695781971901,
+          "declination": -0.998819171150601,
+          "speedLongitude": -0.0529649989197314,
+          "speedLatitude": 0,
+          "speedDistance": 0
+        }
+      },
+      {
+        "id": "sirius",
+        "name": "Sirius",
+        "type": "fixed_star",
+        "astronomy": {
+          "longitude": 103.923762447332,
+          "latitude": -39.6018882346046,
+          "distance": 543946.129303913,
+          "rightAscension": 101.160899183527,
+          "declination": -16.6966677310573,
+          "speedLongitude": 0.000045955800476228,
+          "speedLatitude": -0.000055676878624511,
+          "speedDistance": -0.00563723047801085
+        }
+      },
+      {
+        "id": "south-node-true",
+        "name": "South Node (True)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 177.056094329543,
+          "latitude": 0,
+          "distance": 0.00249394348301901,
+          "rightAscension": 357.29872408423,
+          "declination": -1.17077102156416,
+          "speedLongitude": 0.0138340955740251,
+          "speedLatitude": 0,
+          "speedDistance": -5.98858877731225e-7
+        }
+      },
+      {
+        "id": "south-node-mean",
+        "name": "South Node (Mean)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 177.488720934022,
+          "latitude": 0,
+          "distance": 0.00256955528979999,
+          "rightAscension": 357.695781971901,
+          "declination": -0.998819171150601,
+          "speedLongitude": 0.0529649989197314,
+          "speedLatitude": 0,
+          "speedDistance": 0
+        }
+      },
+      {
+        "id": "part-of-fortune",
+        "name": "Part of Fortune",
+        "type": "arabic_part",
+        "astronomy": {
+          "longitude": 103.745273228624,
+          "latitude": 0
+        }
+      },
+      {
+        "id": "ascendant",
+        "name": "Ascendant",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 174.669540623031,
+          "latitude": 0
+        }
+      },
+      {
+        "id": "descendant",
+        "name": "Descendant",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 354.669540623031,
+          "latitude": 0
+        }
+      },
+      {
+        "id": "mc",
+        "name": "Midheaven",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 83.5232718393584,
+          "latitude": 0
+        }
+      },
+      {
+        "id": "ic",
+        "name": "Imum Coeli",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 263.523271839358,
+          "latitude": 0
+        }
+      },
+      {
+        "id": "vertex",
+        "name": "Vertex",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 346.720595786344,
+          "latitude": 0
+        }
+      },
+      {
+        "id": "anti-vertex",
+        "name": "Anti Vertex",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 166.720595786344,
+          "latitude": 0
+        }
+      }
+    ],
+    "houses": {
+      "houses": [
+        {
+          "number": 1,
+          "cuspLongitude": 174.669540623031
+        },
+        {
+          "number": 2,
+          "cuspLongitude": 199.260533496705
+        },
+        {
+          "number": 3,
+          "cuspLongitude": 229.144909779872
+        },
+        {
+          "number": 4,
+          "cuspLongitude": 263.523271839358
+        },
+        {
+          "number": 5,
+          "cuspLongitude": 298.308642018705
+        },
+        {
+          "number": 6,
+          "cuspLongitude": 329.023874634074
+        },
+        {
+          "number": 7,
+          "cuspLongitude": 354.669540623031
+        },
+        {
+          "number": 8,
+          "cuspLongitude": 19.2605334967051
+        },
+        {
+          "number": 9,
+          "cuspLongitude": 49.1449097798719
+        },
+        {
+          "number": 10,
+          "cuspLongitude": 83.5232718393584
+        },
+        {
+          "number": 11,
+          "cuspLongitude": 118.308642018705
+        },
+        {
+          "number": 12,
+          "cuspLongitude": 149.023874634073
+        }
+      ],
+      "angles": {
+        "ascendant": 174.669540623031,
+        "descendant": 354.669540623031,
+        "mc": 83.5232718393584,
+        "ic": 263.523271839358,
+        "vertex": 346.720595786344,
+        "antiVertex": 166.720595786344,
+        "ascendantDeclination": 2.11809699188324,
+        "descendantDeclination": -2.11809699188323,
+        "mcDeclination": 23.2847699395828,
+        "icDeclination": -23.2847699395828,
+        "vertexDeclination": -5.24322772775499,
+        "antiVertexDeclination": 5.24322772775496
+      }
+    },
+    "angles": {
+      "ascendant": 174.669540623031,
+      "descendant": 354.669540623031,
+      "mc": 83.5232718393584,
+      "ic": 263.523271839358,
+      "vertex": 346.720595786344,
+      "antiVertex": 166.720595786344,
+      "ascendantDeclination": 2.11809699188324,
+      "descendantDeclination": -2.11809699188323,
+      "mcDeclination": 23.2847699395828,
+      "icDeclination": -23.2847699395828,
+      "vertexDeclination": -5.24322772775499,
+      "antiVertexDeclination": 5.24322772775496
+    }
+  },
+  "chart": {
+    "objects": [
+      {
+        "id": "sun",
+        "name": "Sun",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 273.597641228859,
+          "latitude": 0.000047620108757349,
+          "distance": 0.983501358438748,
+          "rightAscension": 273.92035956789,
+          "declination": -23.39424376912,
+          "speedLongitude": 1.01900398129044,
+          "speedLatitude": 0.000028119565984712,
+          "speedDistance": -0.000052235738199566
+        },
+        "astrology": {
+          "sign": "capricorn",
+          "degree": 3,
+          "minute": 35,
+          "second": 51,
+          "retrograde": false,
+          "oob": false,
+          "house": 4
+        }
+      },
+      {
+        "id": "moon",
+        "name": "Moon",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 344.521908623265,
+          "latitude": -1.09553532604761,
+          "distance": 0.00246889853117636,
+          "rightAscension": 346.170978286049,
+          "declination": -7.10531543858445,
+          "speedLongitude": 14.1570028942221,
+          "speedLatitude": 1.21727239500093,
+          "speedDistance": 0.000026660995812899
+        },
+        "astrology": {
+          "sign": "pisces",
+          "degree": 14,
+          "minute": 31,
+          "second": 18,
+          "retrograde": false,
+          "oob": false,
+          "house": 6
+        }
+      },
+      {
+        "id": "mercury",
+        "name": "Mercury",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 275.09116533631,
+          "latitude": -1.71376193512734,
+          "distance": 1.43968262275043,
+          "rightAscension": 275.619223530054,
+          "declination": -25.0577374652759,
+          "speedLongitude": 1.59630729055239,
+          "speedLatitude": -0.0665629943032637,
+          "speedDistance": -0.00308467298231948
+        },
+        "astrology": {
+          "sign": "capricorn",
+          "degree": 5,
+          "minute": 5,
+          "second": 28,
+          "retrograde": false,
+          "oob": true,
+          "house": 4
+        }
+      },
+      {
+        "id": "venus",
+        "name": "Venus",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 304.532685479602,
+          "latitude": -1.80628371397192,
+          "distance": 1.3652089389281,
+          "rightAscension": 307.332538030408,
+          "declination": -20.8852695658181,
+          "speedLongitude": 1.23500143983872,
+          "speedLatitude": -0.00471588690971475,
+          "speedDistance": -0.00511958891380201
+        },
+        "astrology": {
+          "sign": "aquarius",
+          "degree": 4,
+          "minute": 31,
+          "second": 57,
+          "retrograde": false,
+          "oob": false,
+          "house": 5
+        }
+      },
+      {
+        "id": "mars",
+        "name": "Mars",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 230.909799071741,
+          "latitude": 0.533722519740606,
+          "distance": 2.18351573598142,
+          "rightAscension": 228.623103895496,
+          "declination": -17.4711784570995,
+          "speedLongitude": 0.661617658402635,
+          "speedLatitude": -0.00878842179065071,
+          "speedDistance": -0.00734515899937907
+        },
+        "astrology": {
+          "sign": "scorpio",
+          "degree": 20,
+          "minute": 54,
+          "second": 35,
+          "retrograde": false,
+          "oob": false,
+          "house": 3
+        }
+      },
+      {
+        "id": "jupiter",
+        "name": "Jupiter",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 19.9535948825594,
+          "latitude": -1.31990358255533,
+          "distance": 4.59327298172343,
+          "rightAscension": 18.9236049472334,
+          "declination": 6.58040279685277,
+          "speedLongitude": 0.0361729088215833,
+          "speedLatitude": 0.00519522359520901,
+          "speedDistance": 0.0153831225072965
+        },
+        "astrology": {
+          "sign": "aries",
+          "degree": 19,
+          "minute": 57,
+          "second": 12,
+          "retrograde": false,
+          "oob": false,
+          "house": 8
+        }
+      },
+      {
+        "id": "saturn",
+        "name": "Saturn",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 264.757168367405,
+          "latitude": 1.1222919671658,
+          "distance": 11.009660503245,
+          "rightAscension": 264.336446569264,
+          "declination": -22.2179222586309,
+          "speedLongitude": 0.117433412976357,
+          "speedLatitude": -0.000772963554073964,
+          "speedDistance": -0.00260028463751906
+        },
+        "astrology": {
+          "sign": "sagittarius",
+          "degree": 24,
+          "minute": 45,
+          "second": 25,
+          "retrograde": false,
+          "oob": false,
+          "house": 4
+        }
+      },
+      {
+        "id": "uranus",
+        "name": "Uranus",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 267.299024691284,
+          "latitude": -0.165481850461609,
+          "distance": 20.2252853803577,
+          "rightAscension": 267.052732999466,
+          "declination": -23.5810935990174,
+          "speedLongitude": 0.0603507117289448,
+          "speedLatitude": -0.00016882546462344,
+          "speedDistance": -0.00173423876656312
+        },
+        "astrology": {
+          "sign": "sagittarius",
+          "degree": 27,
+          "minute": 17,
+          "second": 56,
+          "retrograde": false,
+          "oob": true,
+          "house": 4
+        }
+      },
+      {
+        "id": "neptune",
+        "name": "Neptune",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 277.556543136113,
+          "latitude": 0.958568860717744,
+          "distance": 31.2104709009993,
+          "rightAscension": 278.168520495889,
+          "declination": -22.270626585953,
+          "speedLongitude": 0.0378008017448207,
+          "speedLatitude": -0.000188336666143659,
+          "speedDistance": 0.00117606500440576
+        },
+        "astrology": {
+          "sign": "capricorn",
+          "degree": 7,
+          "minute": 33,
+          "second": 23,
+          "retrograde": false,
+          "oob": false,
+          "house": 4
+        }
+      },
+      {
+        "id": "pluto",
+        "name": "Pluto",
+        "type": "planet",
+        "astronomy": {
+          "longitude": 221.835512231956,
+          "latitude": 15.8335369036465,
+          "distance": 30.2482094884131,
+          "rightAscension": 224.208863458262,
+          "declination": -0.284637668705693,
+          "speedLongitude": 0.0282414131625331,
+          "speedLatitude": 0.00636830822579557,
+          "speedDistance": -0.0131800414123808
+        },
+        "astrology": {
+          "sign": "scorpio",
+          "degree": 11,
+          "minute": 50,
+          "second": 7,
+          "retrograde": false,
+          "oob": false,
+          "house": 2
+        }
+      },
+      {
+        "id": "chiron",
+        "name": "Chiron",
+        "type": "asteroid",
+        "astronomy": {
+          "longitude": 85.5227830646604,
+          "latitude": -6.29819649175643,
+          "distance": 11.7470904863616,
+          "rightAscension": 85.3442731253914,
+          "declination": 17.0727083124065,
+          "speedLongitude": -0.0623705095140298,
+          "speedLatitude": -0.000242961490902799,
+          "speedDistance": 0.000561169004711735
+        },
+        "astrology": {
+          "sign": "gemini",
+          "degree": 25,
+          "minute": 31,
+          "second": 22,
+          "retrograde": true,
+          "oob": false,
+          "house": 10
+        }
+      },
+      {
+        "id": "lilith-mean",
+        "name": "Black Moon Lilith (Mean)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 134.456172151588,
+          "latitude": 3.51633750178204,
+          "distance": 0.00271062513172255,
+          "rightAscension": 138.008599446791,
+          "declination": 19.8591379130367,
+          "speedLongitude": 0.11134858589532,
+          "speedLatitude": -0.010767834277903,
+          "speedDistance": 0
+        },
+        "astrology": {
+          "sign": "leo",
+          "degree": 14,
+          "minute": 27,
+          "second": 22,
+          "retrograde": false,
+          "oob": false,
+          "house": 11
+        }
+      },
+      {
+        "id": "north-node-true",
+        "name": "North Node (True)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 357.056094329543,
+          "latitude": 0,
+          "distance": 0.00249394348301901,
+          "rightAscension": 357.29872408423,
+          "declination": -1.17077102156416,
+          "speedLongitude": -0.0138340955740251,
+          "speedLatitude": 0,
+          "speedDistance": -5.98858877731225e-7
+        },
+        "astrology": {
+          "sign": "pisces",
+          "degree": 27,
+          "minute": 3,
+          "second": 21,
+          "retrograde": true,
+          "oob": false,
+          "house": 7
+        }
+      },
+      {
+        "id": "north-node-mean",
+        "name": "North Node (Mean)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 357.488720934022,
+          "latitude": 0,
+          "distance": 0.00256955528979999,
+          "rightAscension": 357.695781971901,
+          "declination": -0.998819171150601,
+          "speedLongitude": -0.0529649989197314,
+          "speedLatitude": 0,
+          "speedDistance": 0
+        },
+        "astrology": {
+          "sign": "pisces",
+          "degree": 27,
+          "minute": 29,
+          "second": 19,
+          "retrograde": true,
+          "oob": false,
+          "house": 7
+        }
+      },
+      {
+        "id": "sirius",
+        "name": "Sirius",
+        "type": "fixed_star",
+        "astronomy": {
+          "longitude": 103.923762447332,
+          "latitude": -39.6018882346046,
+          "distance": 543946.129303913,
+          "rightAscension": 101.160899183527,
+          "declination": -16.6966677310573,
+          "speedLongitude": 0.000045955800476228,
+          "speedLatitude": -0.000055676878624511,
+          "speedDistance": -0.00563723047801085
+        },
+        "astrology": {
+          "sign": "cancer",
+          "degree": 13,
+          "minute": 55,
+          "second": 25,
+          "retrograde": false,
+          "oob": false,
+          "house": 10
+        }
+      },
+      {
+        "id": "south-node-true",
+        "name": "South Node (True)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 177.056094329543,
+          "latitude": 0,
+          "distance": 0.00249394348301901,
+          "rightAscension": 357.29872408423,
+          "declination": -1.17077102156416,
+          "speedLongitude": 0.0138340955740251,
+          "speedLatitude": 0,
+          "speedDistance": -5.98858877731225e-7
+        },
+        "astrology": {
+          "sign": "virgo",
+          "degree": 27,
+          "minute": 3,
+          "second": 21,
+          "retrograde": false,
+          "oob": false,
+          "house": 1
+        }
+      },
+      {
+        "id": "south-node-mean",
+        "name": "South Node (Mean)",
+        "type": "point",
+        "astronomy": {
+          "longitude": 177.488720934022,
+          "latitude": 0,
+          "distance": 0.00256955528979999,
+          "rightAscension": 357.695781971901,
+          "declination": -0.998819171150601,
+          "speedLongitude": 0.0529649989197314,
+          "speedLatitude": 0,
+          "speedDistance": 0
+        },
+        "astrology": {
+          "sign": "virgo",
+          "degree": 27,
+          "minute": 29,
+          "second": 19,
+          "retrograde": false,
+          "oob": false,
+          "house": 1
+        }
+      },
+      {
+        "id": "part-of-fortune",
+        "name": "Part of Fortune",
+        "type": "arabic_part",
+        "astronomy": {
+          "longitude": 103.745273228624,
+          "latitude": 0
+        },
+        "astrology": {
+          "sign": "cancer",
+          "degree": 13,
+          "minute": 44,
+          "second": 42,
+          "retrograde": false,
+          "oob": false,
+          "house": 10
+        }
+      },
+      {
+        "id": "ascendant",
+        "name": "Ascendant",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 174.669540623031,
+          "latitude": 0
+        },
+        "astrology": {
+          "sign": "virgo",
+          "degree": 24,
+          "minute": 40,
+          "second": 10,
+          "retrograde": false,
+          "oob": false,
+          "house": 1
+        }
+      },
+      {
+        "id": "descendant",
+        "name": "Descendant",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 354.669540623031,
+          "latitude": 0
+        },
+        "astrology": {
+          "sign": "pisces",
+          "degree": 24,
+          "minute": 40,
+          "second": 10,
+          "retrograde": false,
+          "oob": false,
+          "house": 7
+        }
+      },
+      {
+        "id": "mc",
+        "name": "Midheaven",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 83.5232718393584,
+          "latitude": 0
+        },
+        "astrology": {
+          "sign": "gemini",
+          "degree": 23,
+          "minute": 31,
+          "second": 23,
+          "retrograde": false,
+          "oob": false,
+          "house": 10
+        }
+      },
+      {
+        "id": "ic",
+        "name": "Imum Coeli",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 263.523271839358,
+          "latitude": 0
+        },
+        "astrology": {
+          "sign": "sagittarius",
+          "degree": 23,
+          "minute": 31,
+          "second": 23,
+          "retrograde": false,
+          "oob": false,
+          "house": 4
+        }
+      },
+      {
+        "id": "vertex",
+        "name": "Vertex",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 346.720595786344,
+          "latitude": 0
+        },
+        "astrology": {
+          "sign": "pisces",
+          "degree": 16,
+          "minute": 43,
+          "second": 14,
+          "retrograde": false,
+          "oob": false,
+          "house": 6
+        }
+      },
+      {
+        "id": "anti-vertex",
+        "name": "Anti Vertex",
+        "type": "angle",
+        "astronomy": {
+          "longitude": 166.720595786344,
+          "latitude": 0
+        },
+        "astrology": {
+          "sign": "virgo",
+          "degree": 16,
+          "minute": 43,
+          "second": 14,
+          "retrograde": false,
+          "oob": false,
+          "house": 12
+        }
+      }
+    ],
+    "houses": {
+      "houses": [
+        {
+          "number": 1,
+          "cuspLongitude": 174.669540623031
+        },
+        {
+          "number": 2,
+          "cuspLongitude": 199.260533496705
+        },
+        {
+          "number": 3,
+          "cuspLongitude": 229.144909779872
+        },
+        {
+          "number": 4,
+          "cuspLongitude": 263.523271839358
+        },
+        {
+          "number": 5,
+          "cuspLongitude": 298.308642018705
+        },
+        {
+          "number": 6,
+          "cuspLongitude": 329.023874634074
+        },
+        {
+          "number": 7,
+          "cuspLongitude": 354.669540623031
+        },
+        {
+          "number": 8,
+          "cuspLongitude": 19.2605334967051
+        },
+        {
+          "number": 9,
+          "cuspLongitude": 49.1449097798719
+        },
+        {
+          "number": 10,
+          "cuspLongitude": 83.5232718393584
+        },
+        {
+          "number": 11,
+          "cuspLongitude": 118.308642018705
+        },
+        {
+          "number": 12,
+          "cuspLongitude": 149.023874634073
+        }
+      ],
+      "angles": {
+        "ascendant": 174.669540623031,
+        "descendant": 354.669540623031,
+        "mc": 83.5232718393584,
+        "ic": 263.523271839358,
+        "vertex": 346.720595786344,
+        "antiVertex": 166.720595786344,
+        "ascendantDeclination": 2.11809699188324,
+        "descendantDeclination": -2.11809699188323,
+        "mcDeclination": 23.2847699395828,
+        "icDeclination": -23.2847699395828,
+        "vertexDeclination": -5.24322772775499,
+        "antiVertexDeclination": 5.24322772775496
+      }
+    },
+    "aspects": {
+      "longitudinal": [
+        {
+          "objectA": "sun",
+          "objectB": "moon",
+          "type": "quintile",
+          "orb": 1.07573260559298,
+          "motion": "applying"
+        },
+        {
+          "objectA": "sun",
+          "objectB": "mercury",
+          "type": "conjunction",
+          "orb": 1.493524107452,
+          "motion": "separating"
+        },
+        {
+          "objectA": "sun",
+          "objectB": "venus",
+          "type": "semisextile",
+          "orb": 0.935044250743204,
+          "motion": "separating"
+        },
+        {
+          "objectA": "sun",
+          "objectB": "saturn",
+          "type": "conjunction",
+          "orb": 8.84047286145324,
+          "motion": "separating"
+        },
+        {
+          "objectA": "sun",
+          "objectB": "uranus",
+          "type": "conjunction",
+          "orb": 6.29861653757416,
+          "motion": "separating"
+        },
+        {
+          "objectA": "sun",
+          "objectB": "neptune",
+          "type": "conjunction",
+          "orb": 3.9589019072547,
+          "motion": "applying"
+        },
+        {
+          "objectA": "sun",
+          "objectB": "chiron",
+          "type": "opposition",
+          "orb": 8.07485816419813,
+          "motion": "separating"
+        },
+        {
+          "objectA": "sun",
+          "objectB": "vertex",
+          "type": "quintile",
+          "orb": 1.12295455748517
+        },
+        {
+          "objectA": "moon",
+          "objectB": "mars",
+          "type": "trine",
+          "orb": 6.38789044847522,
+          "motion": "applying"
+        },
+        {
+          "objectA": "moon",
+          "objectB": "pluto",
+          "type": "trine",
+          "orb": 2.68639639131004,
+          "motion": "separating"
+        },
+        {
+          "objectA": "moon",
+          "objectB": "lilith-mean",
+          "type": "quincunx",
+          "orb": 0.0657364716771554,
+          "motion": "separating"
+        },
+        {
+          "objectA": "moon",
+          "objectB": "sirius",
+          "type": "trine",
+          "orb": 0.598146175933891,
+          "motion": "separating"
+        },
+        {
+          "objectA": "moon",
+          "objectB": "part-of-fortune",
+          "type": "trine",
+          "orb": 0.776635394641801
+        },
+        {
+          "objectA": "moon",
+          "objectB": "vertex",
+          "type": "conjunction",
+          "orb": 2.19868716307815
+        },
+        {
+          "objectA": "moon",
+          "objectB": "anti-vertex",
+          "type": "opposition",
+          "orb": 2.19868716307815
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "venus",
+          "type": "semisextile",
+          "orb": 0.5584798567088,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "mars",
+          "type": "semisquare",
+          "orb": 0.81863373543024,
+          "motion": "applying"
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "uranus",
+          "type": "conjunction",
+          "orb": 7.79214064502617,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "neptune",
+          "type": "conjunction",
+          "orb": 2.4653777998027,
+          "motion": "applying"
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "chiron",
+          "type": "opposition",
+          "orb": 9.56838227165014,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "sirius",
+          "type": "opposition",
+          "orb": 8.83259711102113,
+          "motion": "applying"
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "part-of-fortune",
+          "type": "opposition",
+          "orb": 8.65410789231322
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "vertex",
+          "type": "quintile",
+          "orb": 0.370569549966831
+        },
+        {
+          "objectA": "venus",
+          "objectB": "mars",
+          "type": "quintile",
+          "orb": 1.62288640786096,
+          "motion": "separating"
+        },
+        {
+          "objectA": "venus",
+          "objectB": "lilith-mean",
+          "type": "opposition",
+          "orb": 9.92348667198667,
+          "motion": "applying"
+        },
+        {
+          "objectA": "venus",
+          "objectB": "south-node-true",
+          "type": "trine",
+          "orb": 7.47659115005911,
+          "motion": "separating"
+        },
+        {
+          "objectA": "venus",
+          "objectB": "south-node-mean",
+          "type": "trine",
+          "orb": 7.04396454557946,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "jupiter",
+          "type": "quincunx",
+          "orb": 0.956204189181335,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "neptune",
+          "type": "semisquare",
+          "orb": 1.64674406437246,
+          "motion": "applying"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "pluto",
+          "type": "conjunction",
+          "orb": 9.07428683978526,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "chiron",
+          "type": "biquintile",
+          "orb": 1.38701600708038,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "north-node-true",
+          "type": "trine",
+          "orb": 6.14629525780185,
+          "motion": "applying"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "north-node-mean",
+          "type": "trine",
+          "orb": 6.5789218622815,
+          "motion": "applying"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "sirius",
+          "type": "trine",
+          "orb": 6.98603662440911,
+          "motion": "separating"
+        },
+        {
+          "objectA": "mars",
+          "objectB": "part-of-fortune",
+          "type": "trine",
+          "orb": 7.16452584311702
+        },
+        {
+          "objectA": "mars",
+          "objectB": "ascendant",
+          "type": "sextile",
+          "orb": 3.75974155128984
+        },
+        {
+          "objectA": "mars",
+          "objectB": "descendant",
+          "type": "trine",
+          "orb": 3.75974155128984
+        },
+        {
+          "objectA": "mars",
+          "objectB": "mc",
+          "type": "quincunx",
+          "orb": 2.61347276761762
+        },
+        {
+          "objectA": "mars",
+          "objectB": "vertex",
+          "type": "trine",
+          "orb": 4.18920328539707
+        },
+        {
+          "objectA": "mars",
+          "objectB": "anti-vertex",
+          "type": "sextile",
+          "orb": 4.18920328539707
+        },
+        {
+          "objectA": "jupiter",
+          "objectB": "saturn",
+          "type": "trine",
+          "orb": 4.80357348484586,
+          "motion": "separating"
+        },
+        {
+          "objectA": "jupiter",
+          "objectB": "uranus",
+          "type": "trine",
+          "orb": 7.34542980872493,
+          "motion": "separating"
+        },
+        {
+          "objectA": "jupiter",
+          "objectB": "chiron",
+          "type": "sextile",
+          "orb": 5.56918818210096,
+          "motion": "applying"
+        },
+        {
+          "objectA": "jupiter",
+          "objectB": "lilith-mean",
+          "type": "trine",
+          "orb": 5.49742273097104,
+          "motion": "applying"
+        },
+        {
+          "objectA": "jupiter",
+          "objectB": "mc",
+          "type": "sextile",
+          "orb": 3.56967695679896
+        },
+        {
+          "objectA": "jupiter",
+          "objectB": "ic",
+          "type": "trine",
+          "orb": 3.56967695679896
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "uranus",
+          "type": "conjunction",
+          "orb": 2.54185632387907,
+          "motion": "applying"
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "chiron",
+          "type": "opposition",
+          "orb": 0.765614697255103,
+          "motion": "applying"
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "north-node-true",
+          "type": "square",
+          "orb": 2.29892596213733,
+          "motion": "applying"
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "north-node-mean",
+          "type": "square",
+          "orb": 2.73155256661698,
+          "motion": "applying"
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "south-node-true",
+          "type": "square",
+          "orb": 2.29892596213733,
+          "motion": "applying"
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "south-node-mean",
+          "type": "square",
+          "orb": 2.73155256661698,
+          "motion": "applying"
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "ascendant",
+          "type": "square",
+          "orb": 0.0876277443746858
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "descendant",
+          "type": "square",
+          "orb": 0.0876277443746858
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "mc",
+          "type": "opposition",
+          "orb": 1.2338965280469
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "ic",
+          "type": "conjunction",
+          "orb": 1.2338965280469
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "pluto",
+          "type": "semisquare",
+          "orb": 0.463512459328854,
+          "motion": "separating"
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "chiron",
+          "type": "opposition",
+          "orb": 1.77624162662397,
+          "motion": "separating"
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "north-node-true",
+          "type": "square",
+          "orb": 0.242930361741742,
+          "motion": "separating"
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "north-node-mean",
+          "type": "square",
+          "orb": 0.189696242737909,
+          "motion": "applying"
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "south-node-true",
+          "type": "square",
+          "orb": 0.242930361741742,
+          "motion": "separating"
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "south-node-mean",
+          "type": "square",
+          "orb": 0.189696242737909,
+          "motion": "applying"
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "ascendant",
+          "type": "square",
+          "orb": 2.62948406825376
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "descendant",
+          "type": "square",
+          "orb": 2.62948406825376
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "mc",
+          "type": "opposition",
+          "orb": 3.77575285192597
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "ic",
+          "type": "conjunction",
+          "orb": 3.77575285192597
+        },
+        {
+          "objectA": "neptune",
+          "objectB": "pluto",
+          "type": "sextile",
+          "orb": 4.27896909584229,
+          "motion": "applying"
+        },
+        {
+          "objectA": "neptune",
+          "objectB": "lilith-mean",
+          "type": "biquintile",
+          "orb": 0.899629015475171,
+          "motion": "separating"
+        },
+        {
+          "objectA": "neptune",
+          "objectB": "sirius",
+          "type": "opposition",
+          "orb": 6.36721931121843,
+          "motion": "applying"
+        },
+        {
+          "objectA": "neptune",
+          "objectB": "part-of-fortune",
+          "type": "opposition",
+          "orb": 6.18873009251053
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "chiron",
+          "type": "sesquisquare",
+          "orb": 1.31272916729512,
+          "motion": "separating"
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "lilith-mean",
+          "type": "square",
+          "orb": 2.62065991963289,
+          "motion": "separating"
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "north-node-true",
+          "type": "sesquisquare",
+          "orb": 0.220582097587112,
+          "motion": "applying"
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "north-node-mean",
+          "type": "sesquisquare",
+          "orb": 0.653208702066763,
+          "motion": "applying"
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "sirius",
+          "type": "trine",
+          "orb": 2.08825021537615,
+          "motion": "applying"
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "south-node-true",
+          "type": "semisquare",
+          "orb": 0.220582097587112,
+          "motion": "applying"
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "south-node-mean",
+          "type": "semisquare",
+          "orb": 0.653208702066763,
+          "motion": "separating"
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "part-of-fortune",
+          "type": "trine",
+          "orb": 1.90976099666824
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "vertex",
+          "type": "trine",
+          "orb": 4.88508355438819
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "anti-vertex",
+          "type": "sextile",
+          "orb": 4.88508355438819
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "north-node-true",
+          "type": "square",
+          "orb": 1.53331126488223,
+          "motion": "separating"
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "north-node-mean",
+          "type": "square",
+          "orb": 1.96593786936188,
+          "motion": "separating"
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "south-node-true",
+          "type": "square",
+          "orb": 1.53331126488223,
+          "motion": "separating"
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "south-node-mean",
+          "type": "square",
+          "orb": 1.96593786936188,
+          "motion": "separating"
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "ascendant",
+          "type": "square",
+          "orb": 0.853242441629789
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "descendant",
+          "type": "square",
+          "orb": 0.853242441629789
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "mc",
+          "type": "conjunction",
+          "orb": 1.999511225302
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "ic",
+          "type": "opposition",
+          "orb": 1.999511225302
+        },
+        {
+          "objectA": "lilith-mean",
+          "objectB": "north-node-mean",
+          "type": "sesquisquare",
+          "orb": 1.96745121756612,
+          "motion": "separating"
+        },
+        {
+          "objectA": "lilith-mean",
+          "objectB": "sirius",
+          "type": "semisextile",
+          "orb": 0.532409704256736,
+          "motion": "separating"
+        },
+        {
+          "objectA": "lilith-mean",
+          "objectB": "south-node-mean",
+          "type": "semisquare",
+          "orb": 1.96745121756612,
+          "motion": "separating"
+        },
+        {
+          "objectA": "lilith-mean",
+          "objectB": "part-of-fortune",
+          "type": "semisextile",
+          "orb": 0.710898922964645
+        },
+        {
+          "objectA": "lilith-mean",
+          "objectB": "vertex",
+          "type": "quincunx",
+          "orb": 2.2644236347553
+        },
+        {
+          "objectA": "north-node-true",
+          "objectB": "north-node-mean",
+          "type": "conjunction",
+          "orb": 0.432626604479651,
+          "motion": "applying"
+        },
+        {
+          "objectA": "north-node-true",
+          "objectB": "south-node-true",
+          "type": "opposition",
+          "orb": 0,
+          "motion": "separating"
+        },
+        {
+          "objectA": "north-node-true",
+          "objectB": "south-node-mean",
+          "type": "opposition",
+          "orb": 0.432626604479651,
+          "motion": "separating"
+        },
+        {
+          "objectA": "north-node-true",
+          "objectB": "ascendant",
+          "type": "opposition",
+          "orb": 2.38655370651202
+        },
+        {
+          "objectA": "north-node-true",
+          "objectB": "descendant",
+          "type": "conjunction",
+          "orb": 2.38655370651202
+        },
+        {
+          "objectA": "north-node-true",
+          "objectB": "mc",
+          "type": "square",
+          "orb": 3.53282249018423
+        },
+        {
+          "objectA": "north-node-true",
+          "objectB": "ic",
+          "type": "square",
+          "orb": 3.53282249018423
+        },
+        {
+          "objectA": "north-node-mean",
+          "objectB": "south-node-true",
+          "type": "opposition",
+          "orb": 0.432626604479651,
+          "motion": "applying"
+        },
+        {
+          "objectA": "north-node-mean",
+          "objectB": "south-node-mean",
+          "type": "opposition",
+          "orb": 0,
+          "motion": "separating"
+        },
+        {
+          "objectA": "north-node-mean",
+          "objectB": "ascendant",
+          "type": "opposition",
+          "orb": 2.81918031099167
+        },
+        {
+          "objectA": "north-node-mean",
+          "objectB": "descendant",
+          "type": "conjunction",
+          "orb": 2.81918031099167
+        },
+        {
+          "objectA": "north-node-mean",
+          "objectB": "mc",
+          "type": "square",
+          "orb": 3.96544909466388
+        },
+        {
+          "objectA": "north-node-mean",
+          "objectB": "ic",
+          "type": "square",
+          "orb": 3.96544909466388
+        },
+        {
+          "objectA": "sirius",
+          "objectB": "south-node-true",
+          "type": "quintile",
+          "orb": 1.13233188221096,
+          "motion": "separating"
+        },
+        {
+          "objectA": "sirius",
+          "objectB": "south-node-mean",
+          "type": "quintile",
+          "orb": 1.56495848669061,
+          "motion": "separating"
+        },
+        {
+          "objectA": "sirius",
+          "objectB": "part-of-fortune",
+          "type": "conjunction",
+          "orb": 0.178489218707909
+        },
+        {
+          "objectA": "sirius",
+          "objectB": "ascendant",
+          "type": "quintile",
+          "orb": 1.25422182430106
+        },
+        {
+          "objectA": "sirius",
+          "objectB": "vertex",
+          "type": "trine",
+          "orb": 2.79683333901204
+        },
+        {
+          "objectA": "sirius",
+          "objectB": "anti-vertex",
+          "type": "sextile",
+          "orb": 2.79683333901204
+        },
+        {
+          "objectA": "south-node-true",
+          "objectB": "south-node-mean",
+          "type": "conjunction",
+          "orb": 0.432626604479651,
+          "motion": "separating"
+        },
+        {
+          "objectA": "south-node-true",
+          "objectB": "part-of-fortune",
+          "type": "quintile",
+          "orb": 1.31082110091887
+        },
+        {
+          "objectA": "south-node-true",
+          "objectB": "ascendant",
+          "type": "conjunction",
+          "orb": 2.38655370651202
+        },
+        {
+          "objectA": "south-node-true",
+          "objectB": "descendant",
+          "type": "opposition",
+          "orb": 2.38655370651202
+        },
+        {
+          "objectA": "south-node-true",
+          "objectB": "mc",
+          "type": "square",
+          "orb": 3.53282249018423
+        },
+        {
+          "objectA": "south-node-true",
+          "objectB": "ic",
+          "type": "square",
+          "orb": 3.53282249018423
+        },
+        {
+          "objectA": "south-node-mean",
+          "objectB": "part-of-fortune",
+          "type": "quintile",
+          "orb": 1.74344770539852
+        },
+        {
+          "objectA": "south-node-mean",
+          "objectB": "ascendant",
+          "type": "conjunction",
+          "orb": 2.81918031099167
+        },
+        {
+          "objectA": "south-node-mean",
+          "objectB": "descendant",
+          "type": "opposition",
+          "orb": 2.81918031099167
+        },
+        {
+          "objectA": "south-node-mean",
+          "objectB": "mc",
+          "type": "square",
+          "orb": 3.96544909466388
+        },
+        {
+          "objectA": "south-node-mean",
+          "objectB": "ic",
+          "type": "square",
+          "orb": 3.96544909466388
+        },
+        {
+          "objectA": "part-of-fortune",
+          "objectB": "ascendant",
+          "type": "quintile",
+          "orb": 1.07573260559315
+        },
+        {
+          "objectA": "part-of-fortune",
+          "objectB": "vertex",
+          "type": "trine",
+          "orb": 2.97532255771995
+        },
+        {
+          "objectA": "part-of-fortune",
+          "objectB": "anti-vertex",
+          "type": "sextile",
+          "orb": 2.97532255771995
+        },
+        {
+          "objectA": "ascendant",
+          "objectB": "descendant",
+          "type": "opposition",
+          "orb": 0
+        },
+        {
+          "objectA": "ascendant",
+          "objectB": "mc",
+          "type": "square",
+          "orb": 1.14626878367221
+        },
+        {
+          "objectA": "ascendant",
+          "objectB": "ic",
+          "type": "square",
+          "orb": 1.14626878367221
+        },
+        {
+          "objectA": "ascendant",
+          "objectB": "vertex",
+          "type": "opposition",
+          "orb": 7.94894483668691
+        },
+        {
+          "objectA": "ascendant",
+          "objectB": "anti-vertex",
+          "type": "conjunction",
+          "orb": 7.94894483668691
+        },
+        {
+          "objectA": "descendant",
+          "objectB": "mc",
+          "type": "square",
+          "orb": 1.14626878367221
+        },
+        {
+          "objectA": "descendant",
+          "objectB": "ic",
+          "type": "square",
+          "orb": 1.14626878367221
+        },
+        {
+          "objectA": "descendant",
+          "objectB": "vertex",
+          "type": "conjunction",
+          "orb": 7.94894483668691
+        },
+        {
+          "objectA": "descendant",
+          "objectB": "anti-vertex",
+          "type": "opposition",
+          "orb": 7.94894483668691
+        },
+        {
+          "objectA": "mc",
+          "objectB": "ic",
+          "type": "opposition",
+          "orb": 0
+        },
+        {
+          "objectA": "vertex",
+          "objectB": "anti-vertex",
+          "type": "opposition",
+          "orb": 0
+        }
+      ],
+      "declination": [
+        {
+          "objectA": "sun",
+          "objectB": "saturn",
+          "type": "parallel",
+          "orb": 1.17632151048916
+        },
+        {
+          "objectA": "sun",
+          "objectB": "uranus",
+          "type": "parallel",
+          "orb": 0.186849829897334
+        },
+        {
+          "objectA": "sun",
+          "objectB": "neptune",
+          "type": "parallel",
+          "orb": 1.12361718316705
+        },
+        {
+          "objectA": "moon",
+          "objectB": "jupiter",
+          "type": "contraparallel",
+          "orb": 0.524912641731675
+        },
+        {
+          "objectA": "mercury",
+          "objectB": "uranus",
+          "type": "parallel",
+          "orb": 1.47664386625858
+        },
+        {
+          "objectA": "venus",
+          "objectB": "saturn",
+          "type": "parallel",
+          "orb": 1.33265269281278
+        },
+        {
+          "objectA": "venus",
+          "objectB": "neptune",
+          "type": "parallel",
+          "orb": 1.38535702013489
+        },
+        {
+          "objectA": "venus",
+          "objectB": "lilith-mean",
+          "type": "contraparallel",
+          "orb": 1.02613165278141
+        },
+        {
+          "objectA": "mars",
+          "objectB": "chiron",
+          "type": "contraparallel",
+          "orb": 0.398470144693032
+        },
+        {
+          "objectA": "mars",
+          "objectB": "sirius",
+          "type": "parallel",
+          "orb": 0.774510726042166
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "uranus",
+          "type": "parallel",
+          "orb": 1.36317134038649
+        },
+        {
+          "objectA": "saturn",
+          "objectB": "neptune",
+          "type": "parallel",
+          "orb": 0.0527043273221111
+        },
+        {
+          "objectA": "uranus",
+          "objectB": "neptune",
+          "type": "parallel",
+          "orb": 1.31046701306438
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "north-node-true",
+          "type": "parallel",
+          "orb": 0.886133352858471
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "north-node-mean",
+          "type": "parallel",
+          "orb": 0.714181502444908
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "south-node-true",
+          "type": "parallel",
+          "orb": 0.886133352858471
+        },
+        {
+          "objectA": "pluto",
+          "objectB": "south-node-mean",
+          "type": "parallel",
+          "orb": 0.714181502444908
+        },
+        {
+          "objectA": "chiron",
+          "objectB": "sirius",
+          "type": "contraparallel",
+          "orb": 0.376040581349134
+        }
+      ]
+    }
+  }
+}
