@@ -84,9 +84,3 @@ export default function SphereGrid() {
     </group>
   );
 }
-
-/////////////////////*************** *//////////////////
-////////////////////////////TODO////////////////////////
-// ok adesso il spheregrid, starfield
-// e tropic belt è la oob? in ogni caso belt forse troppo larga
-// e pianeti oob non hanno halo + cambiare planetLabel

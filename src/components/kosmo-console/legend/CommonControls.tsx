@@ -1,6 +1,7 @@
 import React from "react";
 import type { ViewMode } from "../../../types/chart";
-import { TbWorldLongitude, TbArrowsVertical, TbSphere } from "react-icons/tb";
+import {  TbArrowsVertical, TbHemisphere } from "react-icons/tb";
+import { BsGlobe } from "react-icons/bs";
 
 export default function CommonControls({
   viewMode,
@@ -12,14 +13,6 @@ export default function CommonControls({
   return (
     <div style={styles.container}>
       {/* Common Controls */}
-      {/* <div
-        style={{
-          display: "flex",
-          gap: 8,
-          padding: 12,
-          borderBottom: "1px solid #1A1A2E",
-        }}
-      > */}
         <button
         title="Longitude View"
           onClick={() => setViewMode("2d")}
@@ -28,7 +21,7 @@ export default function CommonControls({
             ...(viewMode === "2d" ? styles.iconBtnActive : {}),
           }}
         >
-          <TbWorldLongitude />
+          <TbHemisphere />
         </button>
         <button
         title="Declination View"
@@ -48,7 +41,7 @@ export default function CommonControls({
             ...(viewMode === "3d-explorer" ? styles.iconBtnActive : {}),
           }}
         >
-          <TbSphere />
+          <BsGlobe />
         </button>
       </div>
   );

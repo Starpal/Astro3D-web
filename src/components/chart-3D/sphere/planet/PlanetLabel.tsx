@@ -19,12 +19,11 @@ export default function PlanetLabel({
   selected = false,
   onClick,
 }: PlanetLabelProps) {
-  const color = planet.color;
+  const { color, symbol, isOOB } = planet;
 
   return (
     <Html
       center
-      distanceFactor={7}
       zIndexRange={[20, 0]}
       occlude={false}
       style={{
@@ -98,7 +97,20 @@ export default function PlanetLabel({
              inset 0 0 8px ${color}14`;
         }}
       >
-        {planet.symbol}
+        {/* Halo if planet is OOB */}
+        {isOOB && (
+          <span
+            style={{
+              position: "absolute",
+              inset: "-7px",
+              borderRadius: "50%",
+              border: "1.5px solid #C8A96E",
+              boxShadow: "0 0 10px #C8A96E88, 0 0 20px #C8A96E44",
+              pointerEvents: "none",
+            }}
+          />
+        )}
+        {symbol}
       </button>
     </Html>
   );

@@ -1,3 +1,4 @@
+import { Billboard } from "@react-three/drei";
 import type { PlanetVisual } from "../../Chart3D";
 import type { PlanetKey } from "../../../../constants/chart";
 
@@ -17,17 +18,18 @@ export default function PlanetLayer({
   return (
     <>
       {planets.map((planet) => {
-        const selected = selectedPlanet === planet.id;
+        const { id, position, color } = planet;
+        const selected = selectedPlanet === id;
 
         return (
-          <group key={planet.id} position={planet.position}>
+          <group key={id} position={position}>
             {/* Glow sphere */}
             <mesh>
               <sphereGeometry args={[0.13, 18, 18]} />
 
               <meshStandardMaterial
-                color={planet.color}
-                emissive={planet.color}
+                color={color}
+                emissive={color}
                 emissiveIntensity={selected ? 4 : 2}
                 transparent
                 opacity={0.85}
@@ -38,20 +40,20 @@ export default function PlanetLayer({
             <mesh
               onClick={(e) => {
                 e.stopPropagation();
-
-                onSelectPlanet?.(selected ? null : planet.id);
+                onSelectPlanet?.(selected ? null : id);
               }}
             >
               <sphereGeometry args={[0.28, 12, 12]} />
 
               <meshBasicMaterial transparent opacity={0} depthWrite={false} />
             </mesh>
-
-            <PlanetLabel
-              planet={planet}
-              selected={selected}
-              onClick={() => onSelectPlanet?.(selected ? null : planet.id)}
-            />
+            <Billboard follow>
+              <PlanetLabel
+                planet={planet}
+                selected={selected}
+                onClick={() => onSelectPlanet?.(selected ? null : id)}
+              />
+            </Billboard>
           </group>
         );
       })}
