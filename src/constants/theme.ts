@@ -1,3 +1,4 @@
+
 /**
  * Global theme constants for Astro3D Web
  */
@@ -102,3 +103,55 @@ export const ZODIAC_GLYPHS = [
 
   "♓︎",
 ];
+
+export const PLANET_GLYPH: Record<string, string> = PLANET_SYMBOLS;
+
+export const ASPECT_GLYPH: Record<string, string> = {
+  conjunction: '☌',
+  opposition: '☍',
+  trine: '△',
+  square: '□',
+  sextile: '⚹',
+  quincunx: '⚻',
+  semisextile: '⚺',
+  semisquare: '∠',
+  sesquisquare: '⚼',
+  quintile: 'Q',
+  biquintile: 'bq',
+  parallel: '||',
+  contraparallel: '⊥',
+};
+
+export const ASPECT_COLOR: Record<string, string> = {
+  conjunction: '#FF6B6B',
+  opposition: '#EE5A6F',
+  trine: '#51CF66',
+  square: '#FFD43B',
+  sextile: '#74C0FC',
+  quincunx: '#B197FC',
+  semisextile: '#91A7FF',
+  semisquare: '#FFB3BA',
+  sesquisquare: '#FFCCCB',
+  quintile: '#9D84B7',
+  biquintile: '#A5D8FF',
+  parallel: '#5DCCCC',
+  contraparallel: '#FF8A80',
+};
+
+export const ASPECT_NAME: Record<string, string> = {
+  conjunction: 'Conjunction',
+  opposition: 'Opposition',
+  trine: 'Trine',
+  square: 'Square',
+  sextile: 'Sextile',
+  quincunx: 'Quincunx',
+  semisextile: 'Semi-sextile',
+  semisquare: 'Semi-square',
+  sesquisquare: 'Sesquisquare',
+  quintile: 'Quintile',
+  biquintile: 'Biquintile',
+  parallel: 'Parallel',
+  contraparallel: 'Contraparallel',
+};
+
+export const SPHERE_RADIUS = 10;

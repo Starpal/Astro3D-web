@@ -9,3 +9,5 @@ export interface PlanetVisual {
   color: string;
   isRetrograde: boolean;
 }
+
+export type ViewMode = "2d" | "declination" | "3d-explorer";

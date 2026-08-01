@@ -1,5 +1,5 @@
-import type { NatalChartFormData } from "@/types/form";
-import type { ChartRequestBody } from "@/types/backend";
+import type { NatalChartFormData } from "../../types/form";
+import type { ChartRequestBody } from "../../types/backend";
 
 /**
  * Trasforma i dati raccolti dal form della carta natale
@@ -21,7 +21,6 @@ export function birthDataToRequest(data: NatalChartFormData): ChartRequestBody {
   return {
     birthData: {
       dateTime,
-      timezone: data.timezone,
       location: {
         latitude: data.lat,
         longitude: data.lon,

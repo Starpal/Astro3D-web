@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import BirthDataForm from "../birth-data-form/BirthDataForm";
-import Chart3D from "../chart-3D/Chart3D";
+import CelestialChartViewer from "../kosmo-console/KosmoConsole";
 import PlanetProfileCard from "../planetary-table/planet-profile-card/PlanetProfileCard";
 import PlanetaryPositionsModal from "../planetary-table/planetary-position-modal/PlanetaryPositionsModal";
 
@@ -17,22 +17,16 @@ export default function HomeScreen() {
   const [chartRequest, setChartRequest] = useState<ChartRequestBody | null>(
     null,
   );
-
   const [chart, setChart] = useState<NatalChart | null>(null);
-
   const [selectedObject, setSelectedObject] = useState<string | null>(null);
-
   const [showTables, setShowTables] = useState(false);
-
   const [loading, setLoading] = useState(false);
-
   const [error, setError] = useState<string | null>(null);
 
   const selectedObjectData = useMemo(() => {
     if (!chart || !selectedObject) {
       return undefined;
     }
-
     return findChartObject(chart, selectedObject);
   }, [chart, selectedObject]);
 
@@ -49,7 +43,6 @@ export default function HomeScreen() {
       setSelectedObject(null);
     } catch (err) {
       console.error("Chart loading error:", err);
-
       setError(
         err instanceof Error
           ? err.message
@@ -68,6 +61,7 @@ export default function HomeScreen() {
     setError(null);
   };
 
+  // ─── Birth data form screen ───
   if (!chartRequest) {
     return (
       <div className="home-safe">
@@ -88,8 +82,10 @@ export default function HomeScreen() {
     );
   }
 
+  // ─── Chart viewer screen ───
   return (
     <div className="home-safe">
+      {/* Header */}
       <div className="header">
         <button onClick={handleBack} className="back-btn">
           <span className="back-text">← Back</span>
@@ -99,7 +95,6 @@ export default function HomeScreen() {
           <h1 className="header-name">
             {chartRequest.birthData.placeName ?? "Carta Natale"}
           </h1>
-
           <p className="header-date">
             {chartRequest.birthData.dateTime}
             {chartRequest.birthData.placeName
@@ -113,8 +108,18 @@ export default function HomeScreen() {
         </button>
       </div>
 
-      {chart && <Chart3D chart={chart} onSelectPlanet={setSelectedObject} />}
+      {/* 3D Chart Viewer with Canvas + Data Panel */}
+      {chart && (
+        <div style={{ flex: 1, minHeight: 0, overflow: "hidden" }}>
+          <CelestialChartViewer
+            chart={chart}
+            selectedPlanet={selectedObject}
+            onSelectPlanet={setSelectedObject}
+          />
+        </div>
+      )}
 
+      {/* Modal: Planetary Positions Table */}
       {chart && (
         <PlanetaryPositionsModal
           visible={showTables}
@@ -123,6 +128,7 @@ export default function HomeScreen() {
         />
       )}
 
+      {/* Modal: Planet Profile Card */}
       {selectedObjectData && (
         <div className="modal-overlay" onClick={() => setSelectedObject(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>

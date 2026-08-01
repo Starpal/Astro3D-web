@@ -12,7 +12,7 @@ import mockChart from "../assets/mock.json";
  * in una env var (EXPO_PUBLIC_ASTRO_API_URL su Expo) invece di hardcodarlo.
  */
 const API_BASE_URL =
-  import.meta.env.VITE_API_URL?? "http://localhost:3000";
+  import.meta.env.VITE_API_URL ?? "http://localhost:3000";
 
 /**
  * Se true, fetchNatalChart restituisce i dati di assets/mock.json

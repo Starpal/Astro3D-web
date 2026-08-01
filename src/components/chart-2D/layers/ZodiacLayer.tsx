@@ -1,5 +1,6 @@
-import { ZODIAC_GLYPHS } from "../../constants/theme";
-import { zodiacAngle } from "./Chart2D";
+import { ZODIAC_GLYPHS } from "../../../constants/theme";
+import { zodiacAngle } from "../Chart2D";
+import { Fonts } from "../../../constants/theme";
 
 interface Props {
   center: number;
@@ -76,6 +77,7 @@ export default function ZodiacLayer({
             fill="#C8A96E"
             fontSize={16}
             fontWeight={700}
+            fontFamily={Fonts.rounded}
             textAnchor="middle"
             dominantBaseline="middle"
             style={{

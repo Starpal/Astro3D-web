@@ -1,16 +1,16 @@
 import React, { useCallback, useMemo, useRef, useState } from "react";
 import type { NatalChart, ChartObject } from "../../types/astrology";
 import { PLANET_COLORS, PLANET_SYMBOLS } from "../../constants/theme";
-import { ASPECT_DEFINITIONS } from "../../constants/chart";
+import { ASPECT_DEFINITIONS, type PlanetKey } from "../../constants/chart";
 
-import ZodiacLayer from "./ZodiacLayer";
-import HouseLayer from "./HouseLayer";
-import AspectLayer from "./AspectLayer";
-import PlanetLayer from "./PlanetLayer";
+import ZodiacLayer from "./layers/ZodiacLayer";
+import HouseLayer from "./layers/HouseLayer";
+import AspectLayer from "./layers/AspectLayer";
+import PlanetLayer from "./layers/PlanetLayer";
 
 interface Props {
   chart: NatalChart;
-  onSelectPlanet: (id: string) => void;
+  onSelectPlanet?: (planet: PlanetKey | null) => void;
 }
 
 const DEFAULT_CHART_SIZE = 600;
@@ -193,6 +193,15 @@ function Chart2D({ chart, onSelectPlanet }: Props) {
     [planets, ascendant, spreadRadiusPx],
   );
 
+  // Adatta la firma (PlanetKey | null) di onSelectPlanet a quella (string)
+  // richiesta da PlanetLayer.
+  const handlePlanetSelect = useCallback(
+    (id: string) => {
+      onSelectPlanet?.(id as PlanetKey | null);
+    },
+    [onSelectPlanet],
+  );
+
   // --- Zoom/pan web: rotellina per zoom, drag per pan (niente pinch) -----
   const [zoom, setZoom] = useState(1);
   const [pan, setPan] = useState({ x: 0, y: 0 });
@@ -288,7 +297,7 @@ function Chart2D({ chart, onSelectPlanet }: Props) {
             spreadOffsets={spreadOffsets}
             center={center}
             toXY={toXY}
-            onSelectPlanet={onSelectPlanet}
+            onSelectPlanet={handlePlanetSelect}
           />
         </svg>
       </div>
@@ -318,7 +327,7 @@ const styles: Record<string, React.CSSProperties> = {
     touchAction: "none",
   },
   chart: {
-    backgroundColor: "#0A0A12",
+    backgroundColor: "transparent",
     display: "block",
   },
 };

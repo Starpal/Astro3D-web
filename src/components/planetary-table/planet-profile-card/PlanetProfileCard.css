@@ -16,7 +16,6 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
   gap: 12px;
 }
 
@@ -75,6 +74,7 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  color:white;
   justify-content: center;
   border-radius: 6px;
   transition: background-color 0.2s ease;

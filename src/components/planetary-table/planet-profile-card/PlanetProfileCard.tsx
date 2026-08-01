@@ -35,39 +35,39 @@ export default function PlanetaryPanel({
   const color = getObjectColor(object);
 
   return (
-    <div className="planet-profile-container">
-      <div className="planet-profile-header">
-        <div className="planet-profile-titleRow">
+    <div className="container">
+      <div className="header">
+        <div className="titleRow">
           <div
-            className="planet-profile-dot"
+            className="dot"
             style={{ backgroundColor: color }}
           />
 
-          <span className="planet-profile-symbol">{symbol}</span>
+          <span className="symbol">{symbol}</span>
 
           <div>
-            <h1 className="planet-profile-title">{object.name}</h1>
-            <p className="planet-profile-type">{object.type}</p>
+            <h1 className="title">{object.name}</h1>
+            <p className="type">{object.type}</p>
           </div>
 
           {object.astrology.retrograde && (
-            <span className="planet-profile-retro">℞</span>
+            <span className="retro">℞</span>
           )}
         </div>
 
         <button
           onClick={onClose}
-          className="planet-profile-closeBtn"
+          className="closeBtn"
           aria-label="Chiudi"
         >
-          <span className="planet-profile-closeText">✕</span>
+          <span className="closeText">✕</span>
         </button>
       </div>
 
-      <div className="planet-profile-scroll">
+      <div className="scroll">
         <SectionHeader label="POSIZIONE ASTROLOGICA" color="#C8A96E" />
 
-        <div className="planet-profile-dataGrid">
+        <div className="dataGrid">
           <DataRow label="Segno" value={object.astrology.sign} />
 
           <DataRow
@@ -90,7 +90,7 @@ export default function PlanetaryPanel({
 
         <SectionHeader label="DATI ASTRONOMICI" color="#8FB8FF" />
 
-        <div className="planet-profile-dataGrid">
+        <div className="dataGrid">
           <DataRow
             label="Longitudine"
             value={`${object.astronomy.longitude.toFixed(4)}°`}
@@ -151,9 +151,9 @@ export default function PlanetaryPanel({
           color={object.astrology.oob ? "#C8A96E" : "#444"}
         />
 
-        <div className="planet-profile-chip">
+        <div className="chip">
           <p
-            className="planet-profile-chipText"
+            className="chipText"
             style={{
               color: object.astrology.oob ? "#C8A96E" : "#555",
             }}
@@ -167,7 +167,7 @@ export default function PlanetaryPanel({
         <SectionHeader label="ASPETTI LONGITUDINALI" color="#FFAA66" />
 
         {longitudinalAspects.length === 0 ? (
-          <p className="planet-profile-none">Nessun aspetto longitudinale.</p>
+          <p className="none">Nessun aspetto longitudinale.</p>
         ) : (
           longitudinalAspects.map((aspect, index) => {
             const otherId = getOtherObjectId(aspect, object.id);
@@ -180,17 +180,17 @@ export default function PlanetaryPanel({
             return (
               <div
                 key={`${aspect.objectA}-${aspect.objectB}-${index}`}
-                className="planet-profile-aspectRow"
+                className="aspectRow"
               >
-                <span className="planet-profile-aspectSymbol">
+                <span className="aspectSymbol">
                   {getObjectSymbol(other)}
                 </span>
 
-                <span className="planet-profile-aspectName">{other.name}</span>
+                <span className="aspectName">{other.name}</span>
 
-                <span className="planet-profile-aspectType">{aspect.type}</span>
+                <span className="aspectType">{aspect.type}</span>
 
-                <span className="planet-profile-aspectOrb">
+                <span className="aspectOrb">
                   orb {aspect.orb.toFixed(2)}°
                 </span>
               </div>
@@ -201,7 +201,7 @@ export default function PlanetaryPanel({
         <SectionHeader label="ASPETTI DI DECLINAZIONE" color="#4488FF" />
 
         {declinationAspects.length === 0 ? (
-          <p className="planet-profile-none">Nessun aspetto di declinazione.</p>
+          <p className="none">Nessun aspetto di declinazione.</p>
         ) : (
           declinationAspects.map((aspect, index) => {
             const otherId = getOtherObjectId(aspect, object.id);
@@ -214,16 +214,16 @@ export default function PlanetaryPanel({
             return (
               <div
                 key={`${aspect.objectA}-${aspect.objectB}-${index}`}
-                className="planet-profile-aspectRow"
+                className="aspectRow"
               >
-                <span className="planet-profile-aspectSymbol">
+                <span className="aspectSymbol">
                   {getObjectSymbol(other)}
                 </span>
 
-                <span className="planet-profile-aspectName">{other.name}</span>
+                <span className="aspectName">{other.name}</span>
 
                 <span
-                  className="planet-profile-aspectType"
+                  className="aspectType"
                   style={{
                     color: aspect.type === "parallel" ? "#4488FF" : "#FF4444",
                   }}
@@ -231,7 +231,7 @@ export default function PlanetaryPanel({
                   {aspect.type}
                 </span>
 
-                <span className="planet-profile-aspectOrb">
+                <span className="aspectOrb">
                   orb {aspect.orb.toFixed(2)}°
                 </span>
               </div>

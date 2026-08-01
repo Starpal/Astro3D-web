@@ -1,7 +1,7 @@
 // PlanetLayer.tsx
 import React, { useCallback } from "react";
-import type { PlanetVisual } from "./Chart2D";
-import { zodiacAngle } from "./Chart2D";
+import type { PlanetVisual } from "../Chart2D";
+import { zodiacAngle } from "../Chart2D";
 
 interface Props {
   planets: PlanetVisual[];
@@ -11,7 +11,7 @@ interface Props {
   spreadOffsets: Record<string, number>;
   center: number;
   toXY: (angle: number, r: number) => { x: number; y: number };
-  onSelectPlanet: (id: string) => void;
+  onSelectPlanet?: (id: string) => void;
 }
 
 function PlanetLayer({
@@ -37,7 +37,7 @@ function PlanetLayer({
   const handleClick = useCallback(
     (e: React.MouseEvent, id: string) => {
       e.stopPropagation();
-      onSelectPlanet(id);
+      onSelectPlanet?.(id);
     },
     [onSelectPlanet],
   );

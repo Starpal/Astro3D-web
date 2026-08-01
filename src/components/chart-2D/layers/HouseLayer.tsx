@@ -1,8 +1,8 @@
 // HouseLayer.tsx
 import React from "react";
-import type { NatalChart } from "../../types/astrology";
-import { Fonts } from "../../constants/theme";
-import { zodiacAngle } from "./Chart2D";
+import type { NatalChart } from "../../../types/astrology";
+import { Fonts } from "../../../constants/theme";
+import { zodiacAngle } from "../Chart2D";
 
 type House = NatalChart["houses"]["houses"][number];
 

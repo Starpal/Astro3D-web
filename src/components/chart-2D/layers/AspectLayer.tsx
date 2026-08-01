@@ -1,9 +1,9 @@
 // AspectLayer.tsx
 import React from "react";
-import type { NatalChart, MinorAspectType } from "../../types/astrology";
-import { MINOR_ASPECTS } from "../../constants/chart";
-import type { PlanetVisual } from "./Chart2D";
-import { zodiacAngle } from "./Chart2D";
+import type { NatalChart, MinorAspectType } from "../../../types/astrology";
+import { MINOR_ASPECTS } from "../../../constants/chart";
+import type { PlanetVisual } from "../Chart2D";
+import { zodiacAngle } from "../Chart2D";
 
 type LongitudinalAspect = NatalChart["aspects"]["longitudinal"][number] & {
   color: string;
