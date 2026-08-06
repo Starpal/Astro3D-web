@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import BirthDataForm from "../birth-data-form/BirthDataForm";
-import CelestialChartViewer from "../kosmo-console/KosmoConsole";
+import KosmoConsole from "../kosmo-console/KosmoConsole";
 import PlanetProfileCard from "../planetary-table/planet-profile-card/PlanetProfileCard";
 import PlanetaryPositionsModal from "../planetary-table/planetary-position-modal/PlanetaryPositionsModal";
 
@@ -111,7 +111,7 @@ export default function HomeScreen() {
       {/* 3D Chart Viewer with Canvas + Data Panel */}
       {chart && (
         <div style={{ flex: 1, minHeight: 0, overflow: "hidden" }}>
-          <CelestialChartViewer
+          <KosmoConsole
             chart={chart}
             selectedPlanet={selectedObject}
             onSelectPlanet={setSelectedObject}

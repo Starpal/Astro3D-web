@@ -12,17 +12,17 @@ import { SectionHeader } from "../SectionHeader";
 
 import "./PlanetProfileCard.css"; // ← Importa il CSS direttamente
 
-interface PlanetaryPanelProps {
+interface PlanetProfileCardProps {
   chart: NatalChart;
   object: ChartObject;
   onClose: () => void;
 }
 
-export default function PlanetaryPanel({
+export default function PlanetProfileCard({
   chart,
   object,
   onClose,
-}: PlanetaryPanelProps) {
+}: PlanetProfileCardProps) {
   const longitudinalAspects = chart.aspects.longitudinal.filter(
     (aspect) => aspect.objectA === object.id || aspect.objectB === object.id,
   );

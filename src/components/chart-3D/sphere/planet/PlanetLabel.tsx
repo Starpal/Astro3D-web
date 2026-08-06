@@ -35,8 +35,8 @@ export default function PlanetLabel({
         type="button"
         onClick={onClick}
         style={{
-          width: 30,
-          height: 30,
+          width: 40,
+          height: 40,
           borderRadius: "50%",
 
           display: "flex",
@@ -56,8 +56,7 @@ export default function PlanetLabel({
           lineHeight: 1,
           letterSpacing: -0.5,
 
-          // background: `radial-gradient(circle at 35% 35%, ${color}40, rgba(4,6,18,0.92) 70%)`,
-          background: "transparent",
+          background: `radial-gradient(circle at 35% 35%, ${color}40, rgba(4,6,18,0.92) 70%)`,
           border: `2px solid ${selected ? color : `${color}88`}`,
 
           boxShadow: selected
@@ -69,8 +68,8 @@ export default function PlanetLabel({
                0 0 6px ${color}33,
                inset 0 0 8px ${color}14`,
 
-          backdropFilter: "blur(6px)",
-          WebkitBackdropFilter: "blur(6px)",
+          // backdropFilter: "blur(6px)",
+          // WebkitBackdropFilter: "blur(6px)",
 
           transform: selected ? "scale(1.08)" : "scale(1)",
 
@@ -99,16 +98,28 @@ export default function PlanetLabel({
       >
         {/* Halo if planet is OOB */}
         {isOOB && (
-          <span
-            style={{
-              position: "absolute",
-              inset: "-7px",
-              borderRadius: "50%",
-              border: "1.5px solid #C8A96E",
-              boxShadow: "0 0 10px #C8A96E88, 0 0 20px #C8A96E44",
-              pointerEvents: "none",
-            }}
-          />
+          <>
+            <span
+              style={{
+                position: "absolute",
+                inset: "-6px",
+                borderRadius: "50%",
+                border: "2px solid #F3C969",
+                boxShadow: "0 0 12px #F3C969,0 0 24px #F3C969AA",
+                pointerEvents: "none",
+              }}
+            />
+
+            <span
+              style={{
+                position: "absolute",
+                inset: "-10px",
+                borderRadius: "50%",
+                border: "1px solid #F3C96966",
+                pointerEvents: "none",
+              }}
+            />
+          </>
         )}
         {symbol}
       </button>

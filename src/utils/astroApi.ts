@@ -20,7 +20,7 @@ const API_BASE_URL =
  * Impostalo via env var (EXPO_PUBLIC_USE_MOCK=true) o cablando `true` qui sotto.
  */
 const USE_MOCK =
-  import.meta.env.EXPO_PUBLIC_USE_MOCK === "true" || false;
+  import.meta.env.VITE_USE_MOCK=== "true" || false;
 
 /** Cast di comodo: il JSON è una NatalChartResponse a tutti gli effetti. */
 const MOCK_RESPONSE = mockChart as unknown as NatalChartResponse;

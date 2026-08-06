@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import { Html } from "@react-three/drei";
 
 import { SPHERE_RADIUS } from "../../../constants/chart";
@@ -15,7 +15,7 @@ interface AngleMarkersProps {
   };
 }
 
-export default function AngleMarkers({ angles }: AngleMarkersProps) {
+function AngleMarkers({ angles }: AngleMarkersProps) {
   const asc = useMemo(
     () => sphericalToVector(angles.ascendant, 0, R * 1.22),
     [angles.ascendant],
@@ -98,7 +98,6 @@ export default function AngleMarkers({ angles }: AngleMarkersProps) {
           <Html
             position={[position.x, position.y, position.z]}
             center
-            distanceFactor={10}
             zIndexRange={[15, 0]}
             occlude={false}
           >
@@ -122,3 +121,5 @@ export default function AngleMarkers({ angles }: AngleMarkersProps) {
     </group>
   );
 }
+
+export default React.memo(AngleMarkers);

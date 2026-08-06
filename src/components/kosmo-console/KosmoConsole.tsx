@@ -27,8 +27,6 @@ export default function KosmoConsole({
   onSelectPlanet,
 }: KosmoConsole) {
   const [viewMode, setViewMode] = useState<ViewMode>("2d");
-  const [showLongitudinal, setShowLongitudinal] = useState(true);
-  const [showDeclination, setShowDeclination] = useState(true); 
 
   return (
     <div
@@ -71,18 +69,35 @@ export default function KosmoConsole({
             `,
           }}
         />
-
-        {viewMode === "2d" ? (
+        {/* Chart 2D */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: viewMode === "2d" ? "block" : "none",
+          }}
+        >
           <Chart2D
             chart={chart}
             onSelectPlanet={onSelectPlanet as (key: PlanetKey | null) => void}
           />
-        ) : (
+        </div>
+
+        {/* Chart 3D */}
+
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            display: viewMode === "2d" ? "none" : "block",
+          }}
+        >
           <Canvas
             camera={{
-              position: [0, 2, 14],
-              fov: 120,
+              position: [0, 1, 16],
+              fov: 95,
             }}
+            dpr={[1, 1.5]}
             gl={{
               antialias: true,
               alpha: false,
@@ -119,6 +134,7 @@ export default function KosmoConsole({
             />
 
             <OrbitControls
+              target={[0, 0.2, 0]}
               enablePan={false}
               minDistance={8}
               maxDistance={22}
@@ -134,11 +150,11 @@ export default function KosmoConsole({
                 intensity={1.2}
                 luminanceThreshold={0.18}
                 luminanceSmoothing={0.9}
-                mipmapBlur
+                mipmapBlur={false}
               />
             </EffectComposer>
           </Canvas>
-        )}
+        </div>
       </div>
     </div>
   );

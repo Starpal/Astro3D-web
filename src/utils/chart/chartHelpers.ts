@@ -124,7 +124,7 @@ export function sphericalToVector(
   latitude: number,
   radius: number
 ): THREE.Vector3 {
-  const lonRad = THREE.MathUtils.degToRad(longitude);
+  const lonRad = THREE.MathUtils.degToRad(360 - longitude);
   const latRad = THREE.MathUtils.degToRad(latitude);
 
   const cosLat = Math.cos(latRad);
@@ -149,14 +149,22 @@ export function circlePoints(
   const pts: THREE.Vector3[] = [];
 
   for (let i = 0; i <= segments; i++) {
-    const a = (i / segments) * Math.PI * 2;
+    const longitude = (i / segments) * 360;
+
+    const lonRad = THREE.MathUtils.degToRad(longitude);
+
+    const declination = THREE.MathUtils.radToDeg(
+      Math.asin(
+        Math.sin(tiltRad) * Math.sin(lonRad)
+      )
+    );
 
     pts.push(
-      new THREE.Vector3(
-        radius * Math.cos(a),
-        radius * Math.sin(tiltRad) * Math.sin(a),
-        radius * Math.cos(tiltRad) * Math.sin(a),
-      ),
+      sphericalToVector(
+        longitude,
+        declination,
+        radius,
+      )
     );
   }
 

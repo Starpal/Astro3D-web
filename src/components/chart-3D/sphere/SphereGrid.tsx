@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import * as THREE from "three";
 
 import { SPHERE_RADIUS } from "../../../constants/chart";
@@ -11,7 +11,8 @@ const R = SPHERE_RADIUS;
 
 const GRID_COLOR = "#3E6CFF";
 
-export default function SphereGrid() {
+function SphereGrid() {
+  
   const geometries = useMemo(() => {
     const result: {
       geometry: THREE.BufferGeometry;
@@ -84,3 +85,5 @@ export default function SphereGrid() {
     </group>
   );
 }
+
+export default React.memo(SphereGrid);

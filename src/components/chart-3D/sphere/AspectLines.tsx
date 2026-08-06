@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import * as THREE from "three";
 
 import type {
@@ -11,11 +11,6 @@ import type { PlanetVisual } from "../Chart3D";
 
 import { ASPECT_COLOR } from "../../../constants/theme";
 
-/**
- * Cambia questo flag per confrontare facilmente
- * il rendering classico (Line) con quello Beam.
- */
-const USE_BEAMS = true;
 
 interface VisualDeclinationAspect extends DeclinationAspect {
   opacity: number;
@@ -38,13 +33,6 @@ interface AspectBeam {
 
   radius: number;
   length: number;
-}
-
-interface AspectLine {
-  key: string;
-  color: string;
-  opacity: number;
-  positions: Float32Array;
 }
 
 /**
@@ -77,40 +65,15 @@ function createAspectBeam(
   return {
     key,
     color,
-    opacity: 0.32 + exactness * 0.63,
-    radius: 0.005 + exactness * 0.015,
+    opacity: 0.55 + exactness * 0.45,
+    radius: 0.018 + exactness * 0.032,
     length,
     midpoint,
     quaternion,
   };
 }
 
-/**
- * Versione semplice con Line.
- */
-function createAspectLine(
-  key: string,
-  start: THREE.Vector3,
-  end: THREE.Vector3,
-  color: string,
-  opacity: number,
-): AspectLine {
-  return {
-    key,
-    color,
-    opacity,
-    positions: new Float32Array([
-      start.x,
-      start.y,
-      start.z,
-      end.x,
-      end.y,
-      end.z,
-    ]),
-  };
-}
-
-export default function AspectLines({
+function AspectLines({
   planets,
   longitudinalAspects,
   declinationAspects,
@@ -176,58 +139,6 @@ export default function AspectLines({
     return result;
   }, [planetMap, longitudinalAspects, declinationAspects, viewMode]);
 
-  const lines = useMemo(() => {
-    const result: AspectLine[] = [];
-
-    /**
-     * Linee classiche
-     */
-    for (const aspect of longitudinalAspects) {
-      const a = planetMap.get(aspect.objectA);
-      const b = planetMap.get(aspect.objectB);
-
-      if (!a || !b) continue;
-
-      result.push(
-        createAspectLine(
-          `${aspect.objectA}-${aspect.objectB}-${aspect.type}`,
-          a.position,
-          b.position,
-          ASPECT_COLOR[aspect.type] ?? "#888",
-          Math.max(0.25, 0.65 - aspect.orb * 0.06),
-        ),
-      );
-    }
-
-    /**
-     * Paralleli / Contraparalleli
-     */
-    for (const aspect of declinationAspects) {
-      const a = planetMap.get(aspect.objectA);
-      const b = planetMap.get(aspect.objectB);
-
-      if (!a || !b) continue;
-
-      result.push(
-        createAspectLine(
-          `${aspect.objectA}-${aspect.objectB}-${aspect.type}`,
-          a.position,
-          b.position,
-          aspect.type === "parallel" ? "#3DA5FF" : "#FF3B3B",
-          aspect.opacity,
-        ),
-      );
-    }
-
-    return result;
-  }, [planetMap, longitudinalAspects, declinationAspects]);
-
-  /**
-   * ------------------------------------------------------------------
-   * Beam (vecchio Chart3D)
-   * ------------------------------------------------------------------
-   */
-  if (USE_BEAMS) {
     return (
       <group>
         {beams.map((beam) => (
@@ -250,33 +161,6 @@ export default function AspectLines({
         ))}
       </group>
     );
-  }
-
-  /**
-   * ------------------------------------------------------------------
-   * Linee classiche
-   * ------------------------------------------------------------------
-   */
-  return (
-    <group>
-      {lines.map((line) => (
-        <line key={line.key}>
-          <bufferGeometry>
-            <bufferAttribute
-              attach="attributes-position"
-              args={[line.positions, 3]}
-            />
-          </bufferGeometry>
-
-          <lineBasicMaterial
-            color={line.color}
-            transparent
-            opacity={line.opacity}
-            depthWrite={false}
-            fog={false}
-          />
-        </line>
-      ))}
-    </group>
-  );
 }
+
+export default React.memo(AspectLines);

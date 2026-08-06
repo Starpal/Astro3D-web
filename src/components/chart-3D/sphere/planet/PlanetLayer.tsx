@@ -1,3 +1,4 @@
+import React from "react";
 import { Billboard } from "@react-three/drei";
 import type { PlanetVisual } from "../../Chart3D";
 import type { PlanetKey } from "../../../../constants/chart";
@@ -10,7 +11,7 @@ interface PlanetLayerProps {
   onSelectPlanet?: (planet: PlanetKey | null) => void;
 }
 
-export default function PlanetLayer({
+function PlanetLayer({
   planets,
   selectedPlanet,
   onSelectPlanet,
@@ -32,7 +33,7 @@ export default function PlanetLayer({
                 emissive={color}
                 emissiveIntensity={selected ? 4 : 2}
                 transparent
-                opacity={0.85}
+                opacity={0}
               />
             </mesh>
 
@@ -60,3 +61,5 @@ export default function PlanetLayer({
     </>
   );
 }
+
+export default React.memo(PlanetLayer);

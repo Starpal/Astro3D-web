@@ -40,8 +40,6 @@ export interface Chart3DProps {
   onSelectPlanet?: (planet: PlanetKey | null) => void;
   autoRotate?: boolean;
   viewMode: ViewMode;
-    showLongitudinal?: boolean;
-  showDeclination?: boolean;
 }
 
 function clamp(v: number, min: number, max: number) {
@@ -107,7 +105,7 @@ export default function Chart3D({
   //   ASCENDANT_ROTATION_SIGN *
   //   (ASCENDANT_PHASE_OFFSET +
   //     THREE.MathUtils.degToRad(chart.houses.angles.ascendant));
-  const rootRotationY = THREE.MathUtils.degToRad(chart.houses.angles.ascendant);
+  const rootRotationY = THREE.MathUtils.degToRad(chart.houses.angles.ascendant + 180);
 
   return (
     <group ref={groupRef} rotation={[0, rootRotationY, 0]}>
@@ -117,7 +115,7 @@ export default function Chart3D({
 
       <OOBBelt />
 
-      <AngleMarkers angles={chart.houses.angles} />
+     {/*  <AngleMarkers angles={chart.houses.angles} /> */}
 
       <AspectLines
         planets={planets}

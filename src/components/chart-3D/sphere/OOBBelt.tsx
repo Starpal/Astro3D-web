@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import React, { useMemo } from "react";
 import * as THREE from "three";
 
 import {
@@ -15,7 +15,7 @@ const OBL = OBLIQUITY;
 
 const COLOR = "#C8A96E";
 
-export default function OOBBelt() {
+function OOBBelt() {
   const oblRad = THREE.MathUtils.degToRad(OBL);
 
   /**
@@ -189,3 +189,5 @@ export default function OOBBelt() {
     </group>
   );
 }
+
+export default React.memo(OOBBelt);
