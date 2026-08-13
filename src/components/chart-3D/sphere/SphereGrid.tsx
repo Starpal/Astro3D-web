@@ -9,7 +9,7 @@ import {
 
 const R = SPHERE_RADIUS;
 
-const GRID_COLOR = "#3E6CFF";
+const GRID_COLOR = "#4D80FF";
 
 function SphereGrid() {
   
@@ -23,15 +23,11 @@ function SphereGrid() {
     // Paralleli
     //
     for (let lat = -75; lat <= 75; lat += 15) {
-      const pts = latitudeCirclePoints(
-        R,
-        THREE.MathUtils.degToRad(lat),
-        96,
-      );
+      const pts = latitudeCirclePoints(R, THREE.MathUtils.degToRad(lat), 96);
 
       result.push({
         geometry: new THREE.BufferGeometry().setFromPoints(pts),
-        opacity: lat === 0 ? 0.35 : 0.12,
+        opacity: lat === 0 ? 0.35 : 0.18,
       });
     }
 
@@ -39,15 +35,11 @@ function SphereGrid() {
     // Meridiani
     //
     for (let lon = 0; lon < 360; lon += 15) {
-      const pts = meridianPoints(
-        R,
-        THREE.MathUtils.degToRad(lon),
-        96,
-      );
+      const pts = meridianPoints(R, THREE.MathUtils.degToRad(lon), 96);
 
       result.push({
         geometry: new THREE.BufferGeometry().setFromPoints(pts),
-        opacity: 0.12,
+        opacity: 0.15,
       });
     }
 
@@ -77,7 +69,7 @@ function SphereGrid() {
         <meshBasicMaterial
           color="#334466"
           transparent
-          opacity={0.05}
+          opacity={0.35}
           side={THREE.DoubleSide}
           depthWrite={false}
         />

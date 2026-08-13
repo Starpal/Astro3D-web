@@ -120,12 +120,6 @@ export default function KosmoConsole({
               color="#a0b8ff"
             />
 
-            <pointLight
-              position={[-8, -8, 8]}
-              intensity={0.3}
-              color="#ff8840"
-            />
-
             <Chart3D
               chart={chart}
               selectedPlanet={selectedPlanet as PlanetKey | null}

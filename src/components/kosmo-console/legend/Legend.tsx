@@ -26,22 +26,23 @@ export default function Legend({
   return (
     <div style={styles.container}>
       <CommonControls viewMode={viewMode} setViewMode={setViewMode} />
-      {viewMode !== "2d" && (
+      {/* {viewMode !== "2d" && (
         <div style={styles.legend}>
           <LegendItem color="#3DA5FF" label="Parallel" />
           <LegendItem color="#FF3B3B" label="Contraparallel" />
           <LegendItem color="#C8A96E" label="OOB" />
         </div>
-      )}
+      )} */}
     </div>
   );
 }
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    display: "flex",
+    display: "inline-flex",
     flexDirection: "row",
-    padding: "0 15px"
+    padding: "0 15px",
+    width: 'fit-content',
   },
   legend: {
     display: "flex",
