@@ -113,21 +113,6 @@ export default function Chart3D({
     <group ref={groupRef} rotation={[0, rootRotationY, 0]}>
       {/* <Starfield /> */}
 
-      {/* Lighting for glow effect */}
-      <ambientLight color="#0A1A3A" intensity={1.2} />
-      <pointLight
-        color="#3366FF"
-        intensity={0.8}
-        distance={8}
-        position={[0, 3, 3]}
-      />
-      <pointLight
-        color="#112244"
-        intensity={0.4}
-        distance={6}
-        position={[0, -3, -2]}
-      />
-
       <SphereGrid />
 
       <OOBBelt />

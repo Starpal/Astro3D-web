@@ -56,7 +56,7 @@ export default function PlanetLabel({
           lineHeight: 1,
           letterSpacing: -0.5,
 
-          background: `radial-gradient(circle at 35% 35%, ${color}40, rgba(4,6,18,0.92) 70%)`,
+          background: `rgba(4,6,18,0.72)`,
           border: `2px solid ${selected ? color : `${color}88`}`,
 
           boxShadow: selected
@@ -68,8 +68,8 @@ export default function PlanetLabel({
                0 0 6px ${color}33,
                inset 0 0 8px ${color}14`,
 
-          // backdropFilter: "blur(6px)",
-          // WebkitBackdropFilter: "blur(6px)",
+          backdropFilter: "blur(6px)",
+          WebkitBackdropFilter: "blur(6px)",
 
           transform: selected ? "scale(1.08)" : "scale(1)",
 

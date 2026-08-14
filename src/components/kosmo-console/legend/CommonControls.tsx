@@ -28,7 +28,7 @@ export default function CommonControls({
           onClick={() => setViewMode("declination")}
           style={{
             ...styles.iconBtn,
-            ...(viewMode === "3d" ? styles.iconBtnActive : {}),
+            ...(viewMode === "declination" ? styles.iconBtnActive : {}),
           }}
         >
           <TbArrowsVertical />
@@ -49,18 +49,18 @@ export default function CommonControls({
 
 const styles: Record<string, React.CSSProperties> = {
   container: {
-    display: "flex",
+    display: "inline-flex",
     flexDirection: "row",
-    width: "100%",
+    width: "fit-content",
     gap: 8,
-    padding: "10px 0",
-    borderBottom: "1px solid #1A1A2E",
+    padding: "10px 15px",
   },
-    iconBtn: {
+
+  iconBtn: {
     width: 36,
     height: 36,
     minWidth: 36,
-    borderRadius: 2,
+    borderRadius: 6,
     border: "1px solid #2A2A3E",
     background: "rgba(10,10,18,0.85)",
     color: "#8a8a9a",
@@ -71,6 +71,7 @@ const styles: Record<string, React.CSSProperties> = {
     transition: "all 0.2s ease",
     backdropFilter: "blur(8px)",
   },
+
   iconBtnActive: {
     background: "rgba(200,169,110,0.15)",
     borderColor: "#C8A96E",

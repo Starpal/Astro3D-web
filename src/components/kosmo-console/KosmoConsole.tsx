@@ -10,8 +10,9 @@ import Legend from "./legend/Legend";
 
 import type { NatalChart } from "../../types/astrology";
 import type { ViewMode } from "../../types/chart";
-
 import type { PlanetKey } from "../../constants/chart";
+
+import nebula2 from "../../assets/nebula2.png";
 
 import "./KosmoConsole.css";
 
@@ -32,64 +33,80 @@ export default function KosmoConsole({
     <div
       className="celestial-chart-viewer"
       style={{
-        background:
-          "linear-gradient(180deg, #060916 0%, #080c1e 60%, #04080f 100%)",
-        fontFamily: "'Inter', system-ui, sans-serif",
+        position: "relative",
+        display: "flex",
+        flexDirection: "column",
+        flex: 1,
+        minHeight: 0,
+        overflow: "hidden",
       }}
     >
-      {/* UI fuori da Canvas */}
-      <Legend viewMode={viewMode} setViewMode={setViewMode} />
-
       <div
         className="canvas-container"
         style={{
-          minHeight: 0,
-          flex: 1,
           position: "relative",
+          flex: 1,
+          minHeight: 0,
+          overflow: "hidden",
         }}
       >
-        {/* Nebula overlay DOM */}
-        <div
+        {/* Space background */}
+        <img
+          src={nebula2}
+          alt=""
+          draggable={false}
           style={{
             position: "absolute",
             inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            opacity: 0.32,
             pointerEvents: "none",
+            userSelect: "none",
             zIndex: 0,
-            background: `
-              radial-gradient(
-                ellipse 55% 45% at 5% 50%,
-                #4020a022 0%,
-                transparent 60%
-              ),
-              radial-gradient(
-                ellipse 55% 45% at 95% 50%,
-                #401880aa 0%,
-                transparent 50%
-              )
-            `,
           }}
         />
+
+        {/* Floating controls */}
+        <div
+          style={{
+            position: "absolute",
+            top: 12,
+            left: 16,
+            zIndex: 20,
+          }}
+        >
+          <Legend
+            viewMode={viewMode}
+            setViewMode={setViewMode}
+          />
+        </div>
+
         {/* Chart 2D */}
         <div
           style={{
             position: "absolute",
             inset: 0,
             display: viewMode === "2d" ? "block" : "none",
+            zIndex: 1,
           }}
         >
           <Chart2D
             chart={chart}
-            onSelectPlanet={onSelectPlanet as (key: PlanetKey | null) => void}
+            onSelectPlanet={
+              onSelectPlanet as (key: PlanetKey | null) => void
+            }
           />
         </div>
 
         {/* Chart 3D */}
-
         <div
           style={{
             position: "absolute",
             inset: 0,
             display: viewMode === "2d" ? "none" : "block",
+            zIndex: 1,
           }}
         >
           <Canvas
@@ -100,16 +117,20 @@ export default function KosmoConsole({
             dpr={[1, 1.5]}
             gl={{
               antialias: true,
-              alpha: false,
+              alpha: true,
               powerPreference: "high-performance",
             }}
             style={{
               background: "transparent",
             }}
             onCreated={({ gl }) => {
-              gl.setClearColor(new THREE.Color("#06091a"), 1);
+              gl.setClearColor(
+                new THREE.Color("#06091a"),
+                0,
+              );
 
-              gl.outputColorSpace = THREE.SRGBColorSpace;
+              gl.outputColorSpace =
+                THREE.SRGBColorSpace;
             }}
           >
             <ambientLight intensity={0.18} />
@@ -122,8 +143,12 @@ export default function KosmoConsole({
 
             <Chart3D
               chart={chart}
-              selectedPlanet={selectedPlanet as PlanetKey | null}
-              onSelectPlanet={(key) => onSelectPlanet(key)}
+              selectedPlanet={
+                selectedPlanet as PlanetKey | null
+              }
+              onSelectPlanet={(key) =>
+                onSelectPlanet(key)
+              }
               viewMode={viewMode}
             />
 
@@ -141,8 +166,8 @@ export default function KosmoConsole({
 
             <EffectComposer>
               <Bloom
-                intensity={1.2}
-                luminanceThreshold={0.18}
+                intensity={0.75}
+                luminanceThreshold={0.28}
                 luminanceSmoothing={0.9}
                 mipmapBlur={false}
               />

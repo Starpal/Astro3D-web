@@ -41,21 +41,6 @@ export const MINOR_ASPECTS: MinorAspectType[] = [
 
 export const OOB_THRESHOLD = 23 + 27 / 60 + 1.01 / 3600; // ≈ 23.450281°
 
-export const PLANET_RADII: Record<string, number> = {
-  sun: 0.12,
-  jupiter: 0.14,
-  saturn: 0.13,
-  uranus: 0.09,
-  neptune: 0.09,
-  moon: 0.05,
-  venus: 0.065,
-  earth: 0.065,
-  mars: 0.055,
-  mercury: 0.048,
-  pluto: 0.04,
-};
-
-
 /**
  * PlanetKey — tipo per i pianeti nel chart
  * (usa lowercase per consistency con backend)
@@ -93,7 +78,7 @@ export type AspectKey =
 /**
  * SPHERE_RADIUS — raggio della sfera celeste per Three.js
  */
-export const SPHERE_RADIUS = 10;
+export const SPHERE_RADIUS = 10.5;
 
 /**
  * OBLIQUITY — inclinazione assiale terrestre (tropici)

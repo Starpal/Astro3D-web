@@ -91,20 +91,6 @@ function OOBBelt() {
       </line>
 
       {/* ===========================
-          FASCIA OOB
-      ============================ */}
-
-      <mesh geometry={oobGeometry}>
-        <meshBasicMaterial
-          color={COLOR}
-          transparent
-          opacity={0.025}
-          side={THREE.DoubleSide}
-          depthWrite={false}
-        />
-      </mesh>
-
-      {/* ===========================
           TROPICO NORD
       ============================ */}
 
@@ -114,8 +100,8 @@ function OOBBelt() {
       >
         <mesh geometry={coreGeometry}>
           <meshStandardMaterial
-            color="#ffb638"
-            emissive="#ff9020"
+            color="#f6e25f"
+            emissive="#ffb638"
             emissiveIntensity={2.2}
             metalness={0.15}
             roughness={0.25}
@@ -124,8 +110,8 @@ function OOBBelt() {
 
         <mesh geometry={glowGeometry}>
           <meshStandardMaterial
-            color="#ffd080"
-            emissive="#ff8800"
+            color="#f6e25f"
+            emissive="#ffd080"
             emissiveIntensity={1.2}
             transparent
             opacity={0.6}
@@ -135,8 +121,8 @@ function OOBBelt() {
 
         <mesh geometry={haloGeometry}>
           <meshStandardMaterial
-            color="#ffb24a"
-            emissive="#ff8c00"
+           color="#f6e25f"
+            emissive="#ffb638"
             emissiveIntensity={0.7}
             transparent
             opacity={0.22}
@@ -155,8 +141,8 @@ function OOBBelt() {
       >
         <mesh geometry={coreGeometry}>
           <meshStandardMaterial
-            color="#ffb638"
-            emissive="#ff9020"
+            color="#f6e25f"
+            emissive="#ffb638"
             emissiveIntensity={2.2}
             metalness={0.15}
             roughness={0.25}
@@ -165,8 +151,8 @@ function OOBBelt() {
 
         <mesh geometry={glowGeometry}>
           <meshStandardMaterial
-            color="#ffd080"
-            emissive="#ff8800"
+           color="#f6e25f"
+            emissive="#ffd080"
             emissiveIntensity={1.2}
             transparent
             opacity={0.6}
@@ -176,8 +162,8 @@ function OOBBelt() {
 
         <mesh geometry={haloGeometry}>
           <meshStandardMaterial
-            color="#ffb24a"
-            emissive="#ff8c00"
+          color="#f6e25f"
+            emissive="#ffb638"
             emissiveIntensity={0.7}
             transparent
             opacity={0.22}
