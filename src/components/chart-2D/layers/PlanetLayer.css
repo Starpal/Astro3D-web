@@ -1,0 +1,10 @@
+@import '../../styles/variables.css';
+
+.planet-symbol,
+.planet-retrograde {
+  pointer-events: none;
+}
+
+.planet-hitbox {
+  cursor: pointer;
+}

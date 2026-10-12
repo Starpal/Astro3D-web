@@ -1,0 +1,130 @@
+@import '../../../styles/variables.css';
+
+/* ─────────────────────────────────────────────
+   Container
+   ───────────────────────────────────────────── */
+
+.polarity-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────────
+   Simbolo
+   ───────────────────────────────────────────── */
+
+.polarity-card__symbol {
+  flex-shrink: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ─────────────────────────────────────────────
+   Legenda
+   ───────────────────────────────────────────── */
+
+.polarity-card__legend {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  flex: 1;
+  min-width: 0;
+}
+
+/* Riga della legenda: pallino + nome + % */
+.polarity-card__row {
+  display: grid;
+  grid-template-columns: var(--space-3) 1fr auto;
+  align-items: center;
+  column-gap: var(--space-3);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* ─────────────────────────────────────────────
+   Pallini colorati — dimensione FISSA
+   ───────────────────────────────────────────── */
+
+.polarity-card__dot {
+  border-radius: 50%;
+  flex-shrink: 0;
+  justify-self: center; /* centra il pallino nella sua colonna */
+  box-sizing: border-box;
+}
+
+.polarity-card__dot--yin {
+  width: var(--space-4);
+  height: var(--space-4);
+  background-color: #1b1b1f;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.polarity-card__dot--yang {
+  width: calc(var(--space-4) - 2px);
+  height: calc(var(--space-4) - 2px);
+  background-color: #f5f3ea;
+  border: 1px solid rgba(5, 4, 4, 0.18);
+}
+
+/* ─────────────────────────────────────────────
+   Testo
+   ───────────────────────────────────────────── */
+
+.polarity-card__name {
+  font-size: clamp(
+    0.625rem,
+    calc(0.75rem + var(--dominance, 0) * 0.375rem),
+    1.125rem
+  );
+  transition:
+    font-size 200ms ease,
+    opacity 200ms ease;
+}
+
+.polarity-card__percent {
+  font-size: clamp(
+    0.625rem,
+    calc(0.75rem + var(--dominance, 0) * 0.375rem),
+    1.125rem
+  );
+  transition:
+    font-size 200ms ease,
+    opacity 200ms ease;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.95);
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+/* ─────────────────────────────────────────────
+   Responsive
+   ───────────────────────────────────────────── */
+
+@media (max-width: var(--bp-mobile)) {
+  .polarity-card {
+    gap: var(--space-4);
+  }
+
+  .polarity-card__row {
+    grid-template-columns: var(--space-2) 1fr auto;
+    column-gap: var(--space-2);
+    font-size: calc(var(--font-size-xs) - 1px);
+  }
+
+  .polarity-card__dot {
+    width: var(--space-2);
+    height: var(--space-2);
+  }
+
+  .polarity-card__percent {
+    font-size: var(--space-2);
+  }
+}

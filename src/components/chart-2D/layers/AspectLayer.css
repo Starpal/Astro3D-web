@@ -1,0 +1,14 @@
+@import '../../styles/variables.css';
+
+.aspect-line {
+  stroke-width: 1.5;
+  stroke-opacity: 0.25; /* Minimum opacity */
+}
+
+.aspect-line-solid {
+  stroke-dasharray: none;
+}
+
+.aspect-line-dashed {
+  stroke-dasharray: "4 4";
+}

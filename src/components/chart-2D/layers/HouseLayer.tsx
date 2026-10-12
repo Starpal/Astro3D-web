@@ -1,10 +1,10 @@
 // HouseLayer.tsx
 import React from "react";
 import type { NatalChart } from "../../../types/astrology";
+import type { House } from "../../../types/astrology";
 import { Fonts } from "../../../constants/theme";
 import { zodiacAngle } from "../Chart2D";
-
-type House = NatalChart["houses"]["houses"][number];
+import './HouseLayer.css';
 
 interface Props {
   houses: House[];
@@ -31,22 +31,14 @@ function HouseLayer({ houses, ascendant, radius, toXY }: Props) {
               y1={inner.y}
               x2={outer.x}
               y2={outer.y}
-              stroke="#8d4fa5"
-              strokeOpacity={0.5}
-              strokeWidth={0.3}
+              className="house-cusp"
             />
 
             {/* House number */}
             <text
               x={label.x}
               y={label.y}
-              fill="#777"
-              fillOpacity={0.35}
-              fontSize={11}
-              fontWeight={600}
-              fontFamily={Fonts.rounded}
-              textAnchor="middle"
-              dominantBaseline="central"
+              className="house-number"
             >
               {house.number}
             </text>

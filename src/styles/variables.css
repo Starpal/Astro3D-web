@@ -1,0 +1,199 @@
+/* ─────────────────────────────────────────────
+   CSS VARIABLES - CENTRALIZED THEME
+   Defines all reusable values for consistent, maintainable styling
+   ───────────────────────────────────────────── */
+
+/* COLOR SYSTEM */
+:root {
+  /* Base Colors - Dark Theme (primary) */
+  --color-bg-primary: #0A0A12;
+  --color-bg-secondary: #151718;
+  --color-bg-tertiary: #1f2028;
+
+  --color-text-primary: #ECEDEE;
+  --color-text-secondary: #9ca3af;
+  --color-text-tertiary: #6b6375;
+
+  --color-accent: #0a7ea4;
+  --color-accent-light: rgba(10, 126, 164, 0.15);
+  --color-accent-border: rgba(10, 126, 164, 0.5);
+
+  /* Border color */
+  --color-border: #1a1a2e;
+
+  /* Planet Colors (from theme.ts) */
+  --color-sun: #FFD700;
+  --color-moon: #C0C0C0;
+  --color-mercury: #A0A0A0;
+  --color-venus: #FFB6C1;
+  --color-mars: #FF4500;
+  --color-jupiter: #FFA500;
+  --color-saturn: #DAA520;
+  --color-uranus: #7FFFD4;
+  --color-neptune: #4169E1;
+  --color-pluto: #9370DB;
+
+  /* Aspect Colors */
+  --color-aspect-conjunction: #FF6B6B;
+  --color-aspect-opposition: #EE5A6F;
+  --color-aspect-trine: #51CF66;
+  --color-aspect-square: #FFD43B;
+  --color-aspect-sextile: #74C0FC;
+  --color-aspect-quincunx: #B197FC;
+  --color-aspect-semisextile: #91A7FF;
+  --color-aspect-semi-square: #FFB3BA;
+  --color-aspect-sesqui-square: #FFCCCB;
+  --color-aspect-quintile: #9D84B7;
+  --color-aspect-biquintile: #A5D8FF;
+  --color-aspect-parallel: #5DCCCC;
+  --color-aspect-contraparallel: #FF8A80;
+
+  /* UI States */
+  --color-success: #10B981;
+  --color-warning: #F59E0B;
+  --color-error: #EF4444;
+  --color-info: #3B82F6;
+
+  /* Transparent overlays */
+  --color-overlay-dark: rgba(0, 0, 0, 0.5);
+  --color-overlay-light: rgba(255, 255, 255, 0.1);
+  --color-overlay-accent: rgba(10, 126, 164, 0.2);
+}
+
+/* LIGHT THEME OVERRIDES */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg-primary: #ffffff;
+    --color-bg-secondary: #f8fafc;
+    --color-bg-tertiary: #f1f5f9;
+
+    --color-text-primary: #11181C;
+    --color-text-secondary: #64748b;
+    --color-text-tertiary: #94a3b8;
+
+    --color-accent: #0a7ea4;
+    --color-accent-light: rgba(10, 126, 164, 0.1);
+    --color-accent-border: rgba(10, 126, 164, 0.2);
+
+    /* Border color for light theme */
+    --color-border: #e5e4e7;
+  }
+}
+
+/* SPACING SYSTEM */
+:root {
+  /* Base unit: 4px */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 28px;
+  --space-8: 32px;
+  --space-9: 36px;
+  --space-10: 40px;
+  --space-11: 44px;
+  --space-12: 48px;
+
+  /* Specific spacings used in the app */
+  --space-gap-sm: 8px;
+  --space-gap-md: 12px;
+  --space-gap-lg: 16px;
+  --space-gap-xl: 24px;
+
+  /* Container paddings */
+  --padding-sm: 12px;
+  --padding-md: 16px;
+  --padding-lg: 24px;
+  --padding-xl: 32px;
+}
+
+/* TYPOGRAPHY SYSTEM */
+:root {
+  /* Font Families */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;   /* 12px */
+  --font-size-sm: 0.875rem;  /* 14px */
+  --font-size-base: 1rem;    /* 16px */
+  --font-size-lg: 1.125rem;  /* 18px */
+  --font-size-xl: 1.25rem;   /* 20px */
+  --font-size-2xl: 1.5rem;   /* 24px */
+  --font-size-3xl: 1.875rem; /* 30px */
+  --font-size-4xl: 2.25rem;  /* 36px */
+
+  /* Font Weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.025em;
+  --letter-spacing-normal: 0px;
+  --letter-spacing-wide: 0.05em;
+}
+
+/* DIMENSIONS */
+:root {
+  /* Border Radius */
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* Widths */
+  --width-sidebar-sm: 280px;
+  --width-sidebar-md: 320px;
+  --width-sidebar-lg: 360px;
+
+  /* Heights */
+  --height-chart-sm: 400px;
+  --height-chart-md: 500px;
+  --height-chart-lg: 600px;
+
+  /* Max Widths */
+  --max-width-container: 1200px;
+  --max-width-content: 800px;
+}
+
+/* TRANSITIONS */
+:root {
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 350ms ease;
+
+  --transition-property-common: background-color, border-color, color, opacity, transform;
+}
+
+/* Z-INDEX LAYERS */
+:root {
+  --z-index-background: 0;
+  --z-index-content: 1;
+  --z-index-floating: 10;
+  --z-index-overlay: 20;
+  --z-index-modal: 30;
+  --z-index-tooltip: 40;
+}
+
+/* BREAKPOINTS */
+:root {
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-desktop: 900px;
+  --bp-wide: 1200px;
+}

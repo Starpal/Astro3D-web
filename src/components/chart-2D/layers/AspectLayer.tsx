@@ -4,6 +4,7 @@ import type { NatalChart, MinorAspectType } from "../../../types/astrology";
 import { MINOR_ASPECTS } from "../../../constants/chart";
 import type { PlanetVisual } from "../Chart2D";
 import { zodiacAngle } from "../Chart2D";
+import './AspectLayer.css';
 
 type LongitudinalAspect = NatalChart["aspects"]["longitudinal"][number] & {
   color: string;
@@ -50,7 +51,7 @@ function AspectLayer({ aspects, planets, ascendant, radius, toXY }: Props) {
             stroke={aspect.color}
             strokeWidth={1.5}
             strokeOpacity={opacity}
-            strokeDasharray={isDashed ? "4 4" : undefined}
+            className={`aspect-line ${isDashed ? 'aspect-line-dashed' : 'aspect-line-solid'}`}
           />
         );
       })}

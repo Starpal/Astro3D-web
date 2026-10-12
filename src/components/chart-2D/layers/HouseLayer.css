@@ -1,0 +1,17 @@
+@import '../../styles/variables.css';
+
+.house-cusp {
+  stroke: var(--color-accent);
+  stroke-opacity: 0.5;
+  stroke-width: 0.3;
+}
+
+.house-number {
+  fill: var(--color-text-tertiary);
+  fill-opacity: 0.35;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-semibold);
+  font-family: var(--font-sans);
+  text-anchor: middle;
+  dominant-baseline: central;
+}

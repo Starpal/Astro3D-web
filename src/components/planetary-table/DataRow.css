@@ -1,0 +1,22 @@
+@import '../../styles/variables.css';
+
+.data-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--space-4); /* 16px */
+}
+
+.data-label {
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm); /* 12px */
+  letter-spacing: 0.5px;
+}
+
+.data-value {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm); /* 12px */
+  font-weight: var(--font-weight-semibold); /* 600 */
+  text-align: right;
+  flex-shrink: 1;
+}

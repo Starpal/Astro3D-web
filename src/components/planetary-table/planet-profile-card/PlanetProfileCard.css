@@ -1,8 +1,10 @@
+@import '../../styles/variables.css';
+
 .container {
-  background-color: #12121e;
+  background-color: var(--color-bg-secondary);
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
-  padding: 24px;
+  padding: var(--space-6);
   max-height: 85vh;
   border-top-width: 1px;
   border-top-color: #2a2a3e;
@@ -16,14 +18,14 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-3);
 }
 
 .titleRow {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-2);
   flex: 1;
   min-width: 0;
 }
@@ -36,18 +38,18 @@
 }
 
 .symbol {
-  font-size: 24px;
-  color: #e8e0d0;
+  font-size: var(--font-size-2xl);
+  color: var(--color-text-primary);
   flex-shrink: 0;
 }
 
 .title {
-  font-size: 20px;
-  font-weight: 700;
-  color: #e8e0d0;
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
   margin: 0;
   padding: 0;
-  line-height: 1.2;
+  line-height: var(--line-height-tight);
 }
 
 .type {
@@ -61,23 +63,23 @@
 }
 
 .retro {
-  font-size: 16px;
+  font-size: var(--font-size-base);
   color: #c8a96e;
   flex-shrink: 0;
   margin-left: 4px;
 }
 
 .closeBtn {
-  padding: 8px;
+  padding: var(--space-2);
   background: none;
   border: none;
   cursor: pointer;
   display: flex;
   align-items: center;
-  color:white;
+  color: var(--color-text-primary);
   justify-content: center;
   border-radius: 6px;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition-fast) ease;
   flex-shrink: 0;
 }
 
@@ -92,7 +94,7 @@
 
 .closeText {
   color: #555;
-  font-size: 20px;
+  font-size: var(--font-size-xl);
   line-height: 1;
 }
 
@@ -100,7 +102,7 @@
   flex: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-right: 8px;
+  padding-right: var(--space-2);
 }
 
 /* Scrollbar styling per browser moderni */
@@ -115,7 +117,7 @@
 .scroll::-webkit-scrollbar-thumb {
   background-color: #2a2a3e;
   border-radius: 3px;
-  transition: background-color 0.2s ease;
+  transition: background-color var(--transition-fast) ease;
 }
 
 .scroll::-webkit-scrollbar-thumb:hover {
@@ -123,20 +125,20 @@
 }
 
 .dataGrid {
-  background-color: #0a0a12;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 20px;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-2);
 }
 
 .chip {
-  background-color: #0a0a12;
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 4px;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  margin-bottom: var(--space-1);
 }
 
 .chipText {
@@ -159,8 +161,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 8px;
-  padding: 8px 4px;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-1);
   border-bottom-width: 1px;
   border-bottom-color: #1a1a2e;
   border-bottom-style: solid;
@@ -168,7 +170,7 @@
 
 .aspectSymbol {
   font-size: 16px;
-  color: #e8e0d0;
+  color: var(--color-text-primary);
   width: 24px;
   flex-shrink: 0;
   display: flex;
@@ -196,4 +198,8 @@
   font-size: 11px;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.spacer {
+  height: 32px;
 }

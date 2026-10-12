@@ -1,3 +1,13 @@
+@import '../../styles/variables.css';
+
+/* Flex utility classes */
+.flex-0-5 { flex: 0.5; }
+.flex-1-1 { flex: 1.1; }
+.flex-1 { flex: 1; }
+.flex-0-8 { flex: 0.8; }
+.flex-0-6 { flex: 0.6; }
+
+/* Existing CSS from earlier (we already have this file from previous step) */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -12,12 +22,12 @@
 }
 
 .modal-container {
-  background-color: #12121e;
-  border-radius: 16px;
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--radius-xl);
   width: 94%;
   max-height: 85vh;
-  max-width: 1200px;
-  padding: 16px;
+  max-width: var(--max-width-container);
+  padding: var(--space-4);
   border: 1px solid #2a2a3e;
   display: flex;
   flex-direction: column;
@@ -29,22 +39,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 16px;
-  padding-bottom: 12px;
+  margin-bottom: var(--space-4);
+  padding-bottom: var(--space-3);
   border-bottom: 1px solid #1a1a2e;
 }
 
 .modal-title {
-  color: #e8e0d0;
-  font-size: 18px;
-  font-weight: 700;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
   margin: 0;
   padding: 0;
-  line-height: 1.5;
+  line-height: var(--line-height-normal);
 }
 
 .close-btn {
-  padding: 8px;
+  padding: var(--space-2);
   background: none;
   border: none;
   cursor: pointer;
@@ -57,7 +67,7 @@
 
 .close-text {
   color: #666;
-  font-size: 18px;
+  font-size: var(--font-size-lg);
   line-height: 1;
 }
 
@@ -78,7 +88,7 @@
 }
 
 .modal-scroll::-webkit-scrollbar-track {
-  background: #0a0a12;
+  background: var(--color-bg-primary);
 }
 
 .modal-scroll::-webkit-scrollbar-thumb {
@@ -92,8 +102,8 @@
 
 /* Table */
 .table {
-  background-color: #0a0a12;
-  border-radius: 8px;
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
   overflow: hidden;
   border: 1px solid #1a1a2e;
 }
@@ -107,14 +117,14 @@
 
 .header-row {
   background-color: #1a1a2e;
-  font-weight: 600;
+  font-weight: var(--font-weight-semibold);
   position: sticky;
   top: 0;
   z-index: 10;
 }
 
 .data-row {
-  background-color: #0a0a12;
+  background-color: var(--color-bg-primary);
   transition: background-color 0.1s ease;
 }
 
@@ -219,7 +229,7 @@
   .modal-container {
     width: 96%;
     max-height: 90vh;
-    padding: 12px;
+    padding: var(--space-3);
   }
 
   .modal-scroll {
@@ -253,8 +263,8 @@
   .modal-container {
     width: 100%;
     max-height: 95vh;
-    border-radius: 12px;
-    padding: 10px;
+    border-radius: var(--radius-lg);
+    padding: var(--space-2);
   }
 
   .modal-title {

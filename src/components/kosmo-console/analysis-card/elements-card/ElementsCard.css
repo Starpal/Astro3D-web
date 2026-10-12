@@ -1,0 +1,203 @@
+@import '../../../styles/variables.css';
+
+/* ─────────────────────────────────────────────
+   Container
+   ───────────────────────────────────────────── */
+
+.elements-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────────
+   Donut
+   ───────────────────────────────────────────── */
+
+.elements-card__donut {
+  position: relative;
+  flex-shrink: 0;
+  width: 130px;
+  height: 130px;
+}
+
+.elements-card__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.elements-card__center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  pointer-events: none;
+}
+
+.elements-card__center-icon {
+  font-size: 1.375rem;   /* 22px — più grande di prima */
+  line-height: 1;
+}
+
+.elements-card__center-label {
+  font-size: 0.75rem;    /* 12px */
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(220, 231, 255, 0.9);
+}
+
+/* ─────────────────────────────────────────────
+   Legenda
+   ───────────────────────────────────────────── */
+
+.elements-card__legend {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.elements-card__row {
+  display: grid;
+  grid-template-columns: 1.25rem 3.5rem 1fr 2.25rem;
+  align-items: center;
+  column-gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #dce7ff;
+  font-weight: 500;
+  transition: font-size 250ms ease;
+}
+
+/* ── Riga dominante: font più grande, barra più spessa, più respiro ── */
+.elements-card__row--dominant {
+  font-size: 0.875rem;      /* 14px invece di 12px */
+  font-weight: 700;
+  margin-bottom: 0.25rem;   /* distacca il dominante dagli altri */
+}
+
+.elements-card__row--dominant .elements-card__icon {
+  font-size: 1.375rem;      /* 22px invece di 18px */
+}
+
+.elements-card__row--dominant .elements-card__name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.elements-card__row--dominant .elements-card__bar {
+  height: 0.6875rem;        /* 11px invece di 8px */
+}
+
+.elements-card__row--dominant .elements-card__percent {
+  font-size: 1rem;          /* 16px invece di 13px */
+  color: #ffffff;
+}
+
+/* ── Elementi comuni ── */
+
+.elements-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  transition: font-size 250ms ease;
+}
+
+.elements-card__name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: font-weight 250ms ease;
+}
+
+.elements-card__bar {
+  position: relative;
+  display: block;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  transition: height 250ms ease;
+}
+
+.elements-card__bar-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 300ms ease;
+}
+
+.elements-card__percent {
+  text-align: right;
+  font-weight: 700;
+  font-size: 0.8125rem;
+  color: #ffffff;
+  font-variant-numeric: tabular-nums;
+  transition: font-size 250ms ease;
+}
+
+.elements-card__empty {
+  font-size: 0.75rem;
+  color: rgba(220, 231, 255, 0.5);
+  font-style: italic;
+}
+
+/* ─────────────────────────────────────────────
+   Responsive
+   ───────────────────────────────────────────── */
+
+@media (max-width: var(--bp-mobile)) {
+  .elements-card {
+    gap: var(--space-3);
+  }
+
+  .elements-card__donut {
+    width: 130px;
+    height: 130px;
+  }
+
+  .elements-card__row {
+    grid-template-columns: var(--space-4) 12px 1fr 8px;
+    column-gap: var(--space-2);
+    font-size: calc(var(--font-size-xs) - 1px);
+  }
+
+  .elements-card__row--dominant {
+    font-size: var(--font-size-sm);
+  }
+
+  .elements-card__row--dominant .elements-card__icon {
+    font-size: var(--font-size-lg);
+  }
+
+  .elements-card__row--dominant .elements-card__bar {
+    height: var(--space-2);
+  }
+
+  .elements-card__row--dominant .elements-card__percent {
+    font-size: var(--font-size-base);
+  }
+
+  .elements-card__icon {
+    font-size: var(--font-size-base);
+  }
+
+  .elements-card__percent {
+    font-size: var(--space-3);
+  }
+
+  .elements-card__center-icon {
+    font-size: var(--font-size-lg);
+  }
+
+  .elements-card__center-label {
+    font-size: calc(var(--font-size-xs) - 1px);
+  }
+}
